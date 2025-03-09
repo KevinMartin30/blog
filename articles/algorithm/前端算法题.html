@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>前端算法题 | Stephen Martin&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/blog/favicon.ico">
+    <meta name="description" content="Stephen Martin&#39;s blog">
+    <meta name="author" content="Stephen Martin">
+    <meta name="keywords" content="vuepress, 博客">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.7ad3029b.css" as="style"><link rel="preload" href="/blog/assets/js/app.9ee8e2bd.js" as="script"><link rel="preload" href="/blog/assets/js/7.7d4e0756.js" as="script"><link rel="preload" href="/blog/assets/js/2.b149c125.js" as="script"><link rel="preload" href="/blog/assets/js/1.57923c2c.js" as="script"><link rel="preload" href="/blog/assets/js/45.9db3007f.js" as="script"><link rel="preload" href="/blog/assets/js/38.1cd48603.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.74ec441c.js"><link rel="prefetch" href="/blog/assets/js/11.8e7c374e.js"><link rel="prefetch" href="/blog/assets/js/15.f0d401d1.js"><link rel="prefetch" href="/blog/assets/js/16.8bf5deda.js"><link rel="prefetch" href="/blog/assets/js/17.204af4e8.js"><link rel="prefetch" href="/blog/assets/js/18.43e4d924.js"><link rel="prefetch" href="/blog/assets/js/19.9ffaac36.js"><link rel="prefetch" href="/blog/assets/js/20.1f345fb4.js"><link rel="prefetch" href="/blog/assets/js/21.c1ed082d.js"><link rel="prefetch" href="/blog/assets/js/22.9cd7fb60.js"><link rel="prefetch" href="/blog/assets/js/23.ba5f310e.js"><link rel="prefetch" href="/blog/assets/js/24.d80fb429.js"><link rel="prefetch" href="/blog/assets/js/25.3da03d13.js"><link rel="prefetch" href="/blog/assets/js/26.eec8384a.js"><link rel="prefetch" href="/blog/assets/js/27.da2e26ac.js"><link rel="prefetch" href="/blog/assets/js/28.3147fe56.js"><link rel="prefetch" href="/blog/assets/js/29.87c434de.js"><link rel="prefetch" href="/blog/assets/js/3.36554a9d.js"><link rel="prefetch" href="/blog/assets/js/30.7e09371c.js"><link rel="prefetch" href="/blog/assets/js/31.cb5d942b.js"><link rel="prefetch" href="/blog/assets/js/32.fd6168ce.js"><link rel="prefetch" href="/blog/assets/js/33.1899f11b.js"><link rel="prefetch" href="/blog/assets/js/34.2faf3f38.js"><link rel="prefetch" href="/blog/assets/js/35.a7baf3d3.js"><link rel="prefetch" href="/blog/assets/js/36.1b16df4d.js"><link rel="prefetch" href="/blog/assets/js/37.3c3479bf.js"><link rel="prefetch" href="/blog/assets/js/39.9625ff2e.js"><link rel="prefetch" href="/blog/assets/js/4.7b67b435.js"><link rel="prefetch" href="/blog/assets/js/40.ae9bfaae.js"><link rel="prefetch" href="/blog/assets/js/41.29797a28.js"><link rel="prefetch" href="/blog/assets/js/42.31c31adb.js"><link rel="prefetch" href="/blog/assets/js/43.af1809ed.js"><link rel="prefetch" href="/blog/assets/js/44.3b4b6cf8.js"><link rel="prefetch" href="/blog/assets/js/46.d0117883.js"><link rel="prefetch" href="/blog/assets/js/47.034c4b7c.js"><link rel="prefetch" href="/blog/assets/js/48.b64599d8.js"><link rel="prefetch" href="/blog/assets/js/49.10dc0eaf.js"><link rel="prefetch" href="/blog/assets/js/5.74b48686.js"><link rel="prefetch" href="/blog/assets/js/50.ce74d331.js"><link rel="prefetch" href="/blog/assets/js/51.aff8208d.js"><link rel="prefetch" href="/blog/assets/js/52.d5148111.js"><link rel="prefetch" href="/blog/assets/js/53.7f915685.js"><link rel="prefetch" href="/blog/assets/js/54.ab68a580.js"><link rel="prefetch" href="/blog/assets/js/55.e2876a8f.js"><link rel="prefetch" href="/blog/assets/js/6.89999e76.js"><link rel="prefetch" href="/blog/assets/js/8.6c5a1f2f.js"><link rel="prefetch" href="/blog/assets/js/9.40f9c904.js"><link rel="prefetch" href="/blog/assets/js/vendors~docsearch.28e6fd0e.js"><link rel="prefetch" href="/blog/assets/js/vendors~flowchart.cbb81e7a.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.7ad3029b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-757b4ec5><div data-v-757b4ec5><div class="password-shadow password-wrapper-out" style="display:none;" data-v-a6c8d574 data-v-757b4ec5 data-v-757b4ec5><h3 class="title" data-v-a6c8d574>Stephen Martin's blog</h3> <p class="description" data-v-a6c8d574>Stephen Martin's blog</p> <label id="box" class="inputBox" data-v-a6c8d574><input type="password" value="" data-v-a6c8d574> <span data-v-a6c8d574>Konck! Knock!</span> <button data-v-a6c8d574>OK</button></label> <div class="footer" data-v-a6c8d574><span data-v-a6c8d574><i class="iconfont reco-theme" data-v-a6c8d574></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-a6c8d574>vuePress-theme-reco</a></span> <span data-v-a6c8d574><i class="iconfont reco-copyright" data-v-a6c8d574></i> <a data-v-a6c8d574><span data-v-a6c8d574>Stephen Martin</span>
+          
+        <!---->
+        2025
+      </a></span></div></div> <div class="hide" data-v-757b4ec5><header class="navbar" data-v-757b4ec5><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/assets/img/logo.png" alt="Stephen Martin's blog" class="logo"> <span class="site-name">Stephen Martin's blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/前端面试题/" class="nav-link"><i class="undefined"></i>
+  前端面试题
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/系统架构师/" class="nav-link"><i class="undefined"></i>
+  系统架构师
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/前端技术/" class="nav-link"><i class="undefined"></i>
+  前端技术
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/前端算法题/" class="nav-link"><i class="undefined"></i>
+  前端算法题
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/blog/about.html" class="nav-link"><i class="iconfont reco-message"></i>
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-757b4ec5></div> <aside class="sidebar" data-v-757b4ec5><div class="personal-info-wrapper" data-v-d1382112 data-v-757b4ec5><img src="/blog/assets/img/logo.png" alt="author-avatar" class="personal-img" data-v-d1382112> <h3 class="name" data-v-d1382112>
+    Stephen Martin
+  </h3> <div class="num" data-v-d1382112><div data-v-d1382112><h3 data-v-d1382112>13</h3> <h6 data-v-d1382112>文章</h6></div> <div data-v-d1382112><h3 data-v-d1382112>7</h3> <h6 data-v-d1382112>标签</h6></div></div> <ul class="social-links" data-v-d1382112><li class="social-item" data-v-d1382112><i class="iconfont reco-github" style="color:#f26d6d;" data-v-d1382112></i></li><li class="social-item" data-v-d1382112><i class="iconfont reco-mayun" style="color:#fb9b5f;" data-v-d1382112></i></li></ul> <hr data-v-d1382112></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/前端面试题/" class="nav-link"><i class="undefined"></i>
+  前端面试题
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/系统架构师/" class="nav-link"><i class="undefined"></i>
+  系统架构师
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/前端技术/" class="nav-link"><i class="undefined"></i>
+  前端技术
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/前端算法题/" class="nav-link"><i class="undefined"></i>
+  前端算法题
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/blog/about.html" class="nav-link"><i class="iconfont reco-message"></i>
+  关于
+</a></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-a6c8d574 data-v-757b4ec5><h3 class="title" data-v-a6c8d574>前端算法题</h3> <!----> <label id="box" class="inputBox" data-v-a6c8d574><input type="password" value="" data-v-a6c8d574> <span data-v-a6c8d574>Konck! Knock!</span> <button data-v-a6c8d574>OK</button></label> <div class="footer" data-v-a6c8d574><span data-v-a6c8d574><i class="iconfont reco-theme" data-v-a6c8d574></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-a6c8d574>vuePress-theme-reco</a></span> <span data-v-a6c8d574><i class="iconfont reco-copyright" data-v-a6c8d574></i> <a data-v-a6c8d574><span data-v-a6c8d574>Stephen Martin</span>
+          
+        <!---->
+        2025
+      </a></span></div></div> <div data-v-757b4ec5><div data-v-757b4ec5><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">前端算法题</h1> <div data-v-6008cd2c><i class="iconfont reco-account" data-v-6008cd2c><span data-v-6008cd2c>Stephen Martin</span></i> <i class="iconfont reco-date" data-v-6008cd2c><span data-v-6008cd2c>2025/2/10</span></i> <!----> <i class="tags iconfont reco-tag" data-v-6008cd2c><span class="tag-item" data-v-6008cd2c>前端算法题</span></i></div></div> <div class="theme-reco-content content__default"><p><strong>题目来源于 CodeTop 前端高频算法题，记录解题思路与代码</strong></p> <h2 id="_3-无重复字符的最长子串"><a href="#_3-无重复字符的最长子串" class="header-anchor">#</a> 3.无重复字符的最长子串</h2> <p>给定一个字符串 <code>s</code> ，请你找出其中不含有重复字符的 <strong>最长子串</strong>的长度。</p> <p><strong>示例 1:</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入: s = &quot;abcabcbb&quot;
+输出: 3
+解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。
+</code></pre></div><p><strong>示例 2:</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入: s = &quot;bbbbb&quot;
+输出: 1
+解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。
+</code></pre></div><p><strong>示例 3:</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入: s = &quot;pwwkew&quot;
+输出: 3
+解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。
+     请注意，你的答案必须是 子串 的长度，&quot;pwke&quot; 是一个子序列，不是子串。
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>0 &lt;= s.length &lt;= 5 * 10^4</code></li> <li><code>s</code> 由英文字母、数字、符号和空格组成</li></ul> <p><strong>1.暴力解法</strong></p> <p>直接找到字符串的所有子字符串，进行长度比较，时间复杂度 O(n^2)：</p> <div class="language- extra-class"><pre class="language-text"><code>let max = 0;
+let map = new Map();
+for (let i = 0; i &lt; s.length; i++) {
+    let tempMax = 0;
+    let tempS = s.substring(i);
+    for (let temp of tempS) {
+        if (!map.has(temp)) {
+            map.set(temp, 1);
+            tempMax = tempMax + 1;
+            if (tempMax &gt; max) max = tempMax;
+        } else {
+            map.clear();
+            break;
+        }
+    }
+}
+return max;
+</code></pre></div><p><strong>2.滑动窗口解法（双指针）</strong></p> <p>设置左右两个指针，如果右指针对应的元素不在 set 中，则加入 set，移动右指针；如果右指针对应的元素在 set 中，则<strong>一直</strong>移动左指针，并删除左指针在 set 中对应的元素，<strong>使得右指针能够满足条件</strong>（之所以移动左指针是因为这时候已经发生重复了，移动右指针依然重复，没有意义）。当右指针到达字符串尾端时，循环结束，时间复杂度 O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>let left = right = length = maxLength = 0;
+let set = new Set();
+while (right &lt; s.length) {
+    if (!set.has(s[right])) {
+        set.add(s[right]);
+        right++;
+        length++;
+        if (length &gt; maxLength) maxLength = length;
+    } else {
+        while (set.has(s[right])) {
+            set.delete(s[left]);
+            left++;
+            length--;
+        }
+    }
+}
+return maxLength;
+</code></pre></div><h2 id="_88-合并两个有序数组"><a href="#_88-合并两个有序数组" class="header-anchor">#</a> 88.合并两个有序数组</h2> <p>给你两个按 <strong>非递减顺序</strong> 排列的整数数组 <code>nums1</code> 和 <code>nums2</code>，另有两个整数 <code>m</code> 和 <code>n</code> ，分别表示 <code>nums1</code> 和 <code>nums2</code> 中的元素数目。</p> <p>请你 <strong>合并</strong> <code>nums2</code> 到 <code>nums1</code> 中，使合并后的数组同样按 <strong>非递减顺序</strong> 排列。</p> <p><strong>注意：</strong> 最终，合并后数组不应由函数返回，而是存储在数组 <code>nums1</code> 中。为了应对这种情况，<code>nums1</code> 的初始长度为 <code>m + n</code>，其中前 <code>m</code> 个元素表示应合并的元素，后 <code>n</code> 个元素为 <code>0</code> ，应忽略。<code>nums2</code> 的长度为 <code>n</code> 。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+输出：[1,2,2,3,5,6]
+解释：需要合并 [1,2,3] 和 [2,5,6] 。
+合并结果是 [1,2,2,3,5,6] ，其中斜体加粗标注的为 nums1 中的元素。
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums1 = [1], m = 1, nums2 = [], n = 0
+输出：[1]
+解释：需要合并 [1] 和 [] 。
+合并结果是 [1] 。
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums1 = [0], m = 0, nums2 = [1], n = 1
+输出：[1]
+解释：需要合并的数组是 [] 和 [1] 。
+合并结果是 [1] 。
+注意，因为 m = 0 ，所以 nums1 中没有元素。nums1 中仅存的 0 仅仅是为了确保合并结果可以顺利存放到 nums1 中。
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>nums1.length == m + n</code></li> <li><code>nums2.length == n</code></li> <li><code>0 &lt;= m, n &lt;= 200</code></li> <li><code>1 &lt;= m + n &lt;= 200</code></li> <li><code>-109 &lt;= nums1[i], nums2[j] &lt;= 109</code></li></ul> <p><strong>进阶：</strong> 你可以设计实现一个时间复杂度为 <code>O(m + n)</code> 的算法解决此问题吗？</p> <p><strong>1.双指针法</strong></p> <p>每个数组设置一个指针，其中数值小于等于另一个指针指向元素的指针向右移动，当移动至数组末尾时，跳出循环，直接收集另一指针剩余的全部元素即可，时间复杂度 O(m+n)：</p> <div class="language- extra-class"><pre class="language-text"><code>let p1 = 0;
+let p2 = 0;
+let nums = [];
+while (p1 &lt; m &amp;&amp; p2 &lt; n) {
+    if (nums1[p1] &lt;= nums2[p2]) {
+        nums.push(nums1[p1]);
+        p1++;
+    } else {
+        nums.push(nums2[p2]);
+        p2++;
+    }
+}
+if (p1 === m) {
+    while (p2 &lt; n) {
+        nums.push(nums2[p2]);
+        p2++;
+    }
+} else {
+	while (p1 &lt; m) {
+        nums.push(nums1[p1]);
+        p1++;
+    }
+}
+nums1.splice(0, m + n);
+for (let i = 0; i &lt; nums.length; i++) {
+    nums1.push(nums[i]);
+}
+</code></pre></div><p>注意，上述方法会产生一个临时数组，内存消耗大，因此可以采用对nums1数组从后往前进行元素覆盖的方式（如果从前往后可能会覆盖掉nums1原有的元素），不断选出最大的元素插入到数组尾部，时间复杂度 O(m+n)：</p> <div class="language- extra-class"><pre class="language-text"><code>let p1 = m - 1;
+let p2 = n - 1;
+let k = m + n - 1;
+while (p1 &gt;= 0 &amp;&amp; p2 &gt;= 0) {
+    if (nums1[p1] &gt; nums2[p2]) {
+      nums1[k--] = nums1[p1--];
+    } else {
+      nums1[k--] = nums2[p2--];
+    }
+}
+while (p2 &gt;= 0) {
+    nums1[k--] = nums2[p2--];
+}
+</code></pre></div><h2 id="_165-比较版本号"><a href="#_165-比较版本号" class="header-anchor">#</a> 165.比较版本号</h2> <p>给你两个 <strong>版本号字符串</strong> <code>version1</code> 和 <code>version2</code> ，请你比较它们。版本号由被点 <code>'.'</code> 分开的修订号组成。<strong>修订号的值</strong> 是它 <strong>转换为整数</strong> 并忽略前导零。</p> <p>比较版本号时，请按 <strong>从左到右的顺序</strong> 依次比较它们的修订号。如果其中一个版本字符串的修订号较少，则将缺失的修订号视为 <code>0</code>。</p> <p>返回规则如下：</p> <ul><li>如果 <code>version1 &lt; version2</code> 返回 <code>-1</code>，</li> <li>如果 <code>version1 &gt; version2</code>返回  <code>1</code>，</li> <li>除此之外返回 <code>0</code>。</li></ul> <p><strong>示例 1：</strong></p> <p>​		<strong>输入：</strong> version1 = &quot;1.2&quot;, version2 = &quot;1.10&quot;</p> <p>​		<strong>输出：</strong> -1</p> <p>​		<strong>解释：</strong></p> <p>​		version1 的第二个修订号为 &quot;2&quot;，version2 的第二个修订号为 &quot;10&quot;：2 &lt; 10，所以 version1 &lt; version2。</p> <p><strong>示例 2：</strong></p> <p>​		<strong>输入：</strong> version1 = &quot;1.01&quot;, version2 = &quot;1.001&quot;</p> <p>​		<strong>输出：</strong> 0</p> <p>​		<strong>解释：</strong></p> <p>​		忽略前导零，&quot;01&quot; 和 &quot;001&quot; 都代表相同的整数 &quot;1&quot;。</p> <p><strong>示例 3：</strong></p> <p>​		<strong>输入：</strong> version1 = &quot;1.0&quot;, version2 = &quot;1.0.0.0&quot;</p> <p>​		<strong>输出：</strong> 0</p> <p>​		<strong>解释：</strong></p> <p>​		version1 有更少的修订号，每个缺失的修订号按 &quot;0&quot; 处理。</p> <p><strong>提示：</strong></p> <ul><li><code>1 &lt;= version1.length, version2.length &lt;= 500</code></li> <li><code>version1</code> 和 <code>version2</code> 仅包含数字和 <code>'.'</code></li> <li><code>version1</code> 和 <code>version2</code> 都是 <strong>有效版本号</strong></li> <li><code>version1</code> 和 <code>version2</code> 的所有修订号都可以存储在 <strong>32 位整数</strong> 中</li></ul> <p><strong>1.split分割法</strong></p> <p>时间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>let arr1 = version1.split(&quot;.&quot;);
+let arr2 = version2.split(&quot;.&quot;);
+if (arr1.length &gt;= arr2.length) {
+    for (let i = 0; i &lt; arr1.length; i++) {
+      if (i &gt; arr2.length - 1) {
+        arr2.push(&quot;0&quot;);
+      }
+    }
+} else {
+    for (let i = 0; i &lt; arr2.length; i++) {
+      if (i &gt; arr1.length - 1) {
+        arr1.push(&quot;0&quot;);
+      }
+    }
+}
+for (let i = 0; i &lt; arr1.length; i++) {
+    if (Number(arr1[i]) &gt; Number(arr2[i])) return 1;
+    else if (Number(arr1[i]) &lt; Number(arr2[i])) return -1;
+}
+return 0;
+</code></pre></div><p><strong>2.遍历法（不用split）</strong></p> <p>时间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>let arr1 = [];
+let arr2 = [];
+let str = &quot;&quot;;
+for (let i = 0; i &lt; version1.length; i++) {
+    if (version1[i] !== &quot;.&quot;) str += version1[i];
+    else {
+      arr1.push(str);
+      str = &quot;&quot;;
+    }
+}
+arr1.push(str);
+str = &quot;&quot;;
+for (let i = 0; i &lt; version2.length; i++) {
+    if (version2[i] !== &quot;.&quot;) str += version2[i];
+    else {
+      arr2.push(str);
+      str = &quot;&quot;;
+    }
+}
+arr2.push(str);
+if (arr1.length &gt;= arr2.length) {
+    for (let i = 0; i &lt; arr1.length; i++) {
+      if (i &gt; arr2.length - 1) {
+        arr2.push(&quot;0&quot;);
+      }
+    }
+} else {
+    for (let i = 0; i &lt; arr2.length; i++) {
+      if (i &gt; arr1.length - 1) {
+        arr1.push(&quot;0&quot;);
+      }
+    }
+}
+for (let i = 0; i &lt; arr1.length; i++) {
+    if (Number(arr1[i]) &gt; Number(arr2[i])) return 1;
+    else if (Number(arr1[i]) &lt; Number(arr2[i])) return -1;
+}
+return 0;
+</code></pre></div><p><strong>3.双指针法</strong></p> <p>时间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>let p1 = 0;
+let p2 = 0;
+while (p1 &lt; version1.length || p2 &lt; version2.length) {
+    let num1 = 0;
+    for (; p1 &lt; version1.length &amp;&amp; version1[p1] !== &quot;.&quot;; p1++) {
+        num1 = num1 * 10 + (version1[p1] - &quot;0&quot;);
+    }
+    let num2 = 0;
+    for (; p2 &lt; version2.length &amp;&amp; version2[p2] !== &quot;.&quot;; p2++) {
+        num2 = num2 * 10 + (version2[p2] - &quot;0&quot;);
+    }
+    if (num1 !== num2) return num1 &gt; num2 ? 1 : -1;
+    p1++;
+    p2++;
+}
+return 0;
+</code></pre></div><h2 id="_1-两数之和"><a href="#_1-两数之和" class="header-anchor">#</a> 1.两数之和</h2> <p>给定一个整数数组 <code>nums</code> 和一个整数目标值 <code>target</code>，请你在该数组中找出 <strong>和为目标值</strong> <em><code>target</code></em> 的那 <strong>两个</strong> 整数，并返回它们的数组下标。</p> <p>你可以假设每种输入只会对应一个答案，并且你不能使用两次相同的元素。</p> <p>你可以按任意顺序返回答案。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums = [2,7,11,15], target = 9
+输出：[0,1]
+解释：因为 nums[0] + nums[1] == 9 ，返回 [0, 1] 。
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums = [3,2,4], target = 6
+输出：[1,2]
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums = [3,3], target = 6
+输出：[0,1]
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>2 &lt;= nums.length &lt;= 104</code></li> <li><code>-109 &lt;= nums[i] &lt;= 109</code></li> <li><code>-109 &lt;= target &lt;= 109</code></li> <li><strong>只会存在一个有效答案</strong></li></ul> <p><strong>进阶：</strong> 你可以想出一个时间复杂度小于 <code>O(n2)</code> 的算法吗？</p> <p><strong>1.双指针法</strong></p> <p>在保留原始索引的前提下，先排序，然后用双指针首尾相向靠近，直到找到解，时间复杂度O(nlogn)，主要耗时在排序这一过程：</p> <div class="language- extra-class"><pre class="language-text"><code>let p1 = 0;
+let p2 = nums.length - 1;
+nums = nums.map((item, index) =&gt; {
+    return { item, index };
+});
+nums.sort(function (a, b) {
+    return a.item - b.item;
+});
+while (p1 &lt; p2) {
+    if (nums[p1].item + nums[p2].item &lt; target) p1++;
+    else if (nums[p1].item + nums[p2].item &gt; target) p2--;
+    else return [nums[p1].index, nums[p2].index];
+}
+</code></pre></div><p><strong>2.哈希Map法</strong></p> <p>通过Map存储元素及索引，用距离target的差值判断是否有对应元素，时间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>const map = new Map();
+for (let index = 0; index &lt; nums.length; index++) {
+    const diff = target - nums[index];
+    if (!map.has(diff)) map.set(nums[index], index);
+    else return [map.get(diff), index];
+}
+return [];
+</code></pre></div><h2 id="_415-字符串相加"><a href="#_415-字符串相加" class="header-anchor">#</a> 415.字符串相加</h2> <p>给定两个字符串形式的非负整数 <code>num1</code> 和<code>num2</code> ，计算它们的和并同样以字符串形式返回。</p> <p>你不能使用任何內建的用于处理大整数的库（比如 <code>BigInteger</code>）， 也不能直接将输入的字符串转换为整数形式。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：num1 = &quot;11&quot;, num2 = &quot;123&quot;
+输出：&quot;134&quot;
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：num1 = &quot;456&quot;, num2 = &quot;77&quot;
+输出：&quot;533&quot;
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：num1 = &quot;0&quot;, num2 = &quot;0&quot;
+输出：&quot;0&quot;
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= num1.length, num2.length &lt;= 104</code></li> <li><code>num1</code> 和<code>num2</code> 都只包含数字 <code>0-9</code></li> <li><code>num1</code> 和<code>num2</code> 都不包含任何前导零</li></ul> <p><strong>1.进位加法</strong></p> <p>仿照现实中两数相加的方法，从后往前进行加法运算，同时考虑进位，时间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>let sum = &quot;&quot;;
+let carry = 0;
+if (num1.length &lt; num2.length) num1 = num1.padStart(num2.length, &quot;0&quot;);
+else num2 = num2.padStart(num1.length, &quot;0&quot;);
+for (let i = num1.length - 1; i &gt;= 0; i--) {
+    if (num1[i] - &quot;0&quot; + (num2[i] - &quot;0&quot;) + carry &gt;= 10) {
+        sum = num1[i] - &quot;0&quot; + (num2[i] - &quot;0&quot;) + carry - 10 + sum;
+        carry = 1;
+    } else {
+        sum = num1[i] - &quot;0&quot; + (num2[i] - &quot;0&quot;) + carry + sum;
+        carry = 0;
+    }
+}
+if (carry === 1) sum = 1 + sum;
+return sum;
+</code></pre></div><h2 id="_20-有效的括号"><a href="#_20-有效的括号" class="header-anchor">#</a> 20.有效的括号</h2> <p>给定一个只包括 <code>'('</code>，<code>')'</code>，<code>'{'</code>，<code>'}'</code>，<code>'['</code>，<code>']'</code> 的字符串 <code>s</code> ，判断字符串是否有效。</p> <p>有效字符串需满足：</p> <ol><li>左括号必须用相同类型的右括号闭合。</li> <li>左括号必须以正确的顺序闭合。</li> <li>每个右括号都有一个对应的相同类型的左括号。</li></ol> <p><strong>示例 1：</strong></p> <p><strong>输入：</strong> s = &quot;()&quot;</p> <p><strong>输出：</strong> true</p> <p><strong>示例 2：</strong></p> <p><strong>输入：</strong> s = &quot;()[]{}&quot;</p> <p><strong>输出：</strong> true</p> <p><strong>示例 3：</strong></p> <p><strong>输入：</strong> s = &quot;(]&quot;</p> <p><strong>输出：</strong> false</p> <p><strong>示例 4：</strong></p> <p><strong>输入：</strong> s = &quot;([])&quot;</p> <p><strong>输出：</strong> true</p> <p><strong>提示：</strong></p> <ul><li><code>1 &lt;= s.length &lt;= 104</code></li> <li><code>s</code> 仅由括号 <code>'()[]{}'</code> 组成</li></ul> <p><strong>1.栈存储法</strong></p> <p>碰到左括号压栈，碰到右括号则将栈中元素弹出，如果与右括号匹配则继续，不匹配则失败，注意栈中只存放左括号，时间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>let stack = [];
+for (let i = 0; i &lt; s.length; i++) {
+    if (s[i] === &quot;(&quot; || s[i] === &quot;{&quot; || s[i] === &quot;[&quot;) {
+        stack.push(s[i]);
+    } else if (s[i] === &quot;)&quot;) {
+        if (stack.pop() === &quot;(&quot;) continue;
+        else return false;
+    } else if (s[i] === &quot;}&quot;) {
+        if (stack.pop() === &quot;{&quot;) continue;
+        else return false;
+    } else if (s[i] === &quot;]&quot;) {
+        if (stack.pop() === &quot;[&quot;) continue;
+        else return false;
+    }
+}
+if (stack.length === 0) return true;
+else return false;
+</code></pre></div><h2 id="_46-全排列"><a href="#_46-全排列" class="header-anchor">#</a> 46.全排列</h2> <p>给定一个不含重复数字的数组 <code>nums</code> ，返回其 <em>所有可能的全排列</em> 。你可以 <strong>按任意顺序</strong> 返回答案。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums = [1,2,3]
+输出：[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums = [0,1]
+输出：[[0,1],[1,0]]
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums = [1]
+输出：[[1]]
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= nums.length &lt;= 6</code></li> <li><code>-10 &lt;= nums[i] &lt;= 10</code></li> <li><code>nums</code> 中的所有整数 <strong>互不相同</strong></li></ul> <p><strong>1.回溯法</strong></p> <p>通过递归方式进行回溯，每一次搜索为深度优先搜索，考虑完当前可能性，则返回上一步继续搜索（返回的这种思路即为回溯），时间复杂度O(n!)：</p> <div class="language- extra-class"><pre class="language-text"><code>let res = [];
+dfs([]);
+function dfs(arr) {
+    if (arr.length === nums.length) {
+        res.push([...arr]);
+        return;
+    }
+    for (let i = 0; i &lt; nums.length; i++) {
+        if (arr.includes(nums[i])) continue;
+        arr.push(nums[i]);
+        dfs(arr);
+        arr.pop();
+    }
+}
+return res;
+</code></pre></div><h2 id="_206-反转链表"><a href="#_206-反转链表" class="header-anchor">#</a> 206.反转链表</h2> <p>给你单链表的头节点 <code>head</code> ，请你反转链表，并返回反转后的链表。</p> <p><strong>示例 1：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：head = [1,2,3,4,5]
+输出：[5,4,3,2,1]
+</code></pre></div><p><strong>示例 2：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2021/02/19/rev1ex2.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：head = [1,2]
+输出：[2,1]
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：head = []
+输出：[]
+</code></pre></div><p><strong>提示：</strong></p> <ul><li>链表中节点的数目范围是 <code>[0, 5000]</code></li> <li><code>-5000 &lt;= Node.val &lt;= 5000</code></li></ul> <p><strong>进阶：</strong>  链表可以选用迭代或递归方式完成反转。你能否用两种方法解决这道题？</p> <p><strong>1.迭代法</strong></p> <p>创建temp、cur、next三个指针，对链表进行迭代，完成反转，时间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>if (head === null || head.next === null) return head;
+let temp = null;
+let cur = head;
+let next = head;
+while (cur !== null) {
+    next = cur.next;
+    cur.next = temp;
+    temp = cur;
+    cur = next;
+}
+return temp;
+</code></pre></div><p><strong>2.递归法</strong></p> <div class="language- extra-class"><pre class="language-text"><code>if (head === null || head.next === null) return head;
+let res = reverseList(head.next);
+head.next.next = head;
+head.next = null;
+return res;
+</code></pre></div><h2 id="_53-最大子数组和"><a href="#_53-最大子数组和" class="header-anchor">#</a> 53.最大子数组和</h2> <p>给你一个整数数组 <code>nums</code> ，请你找出一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。</p> <p><strong>子数组</strong></p> <p>是数组中的一个连续部分。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums = [-2,1,-3,4,-1,2,1,-5,4]
+输出：6
+解释：连续子数组 [4,-1,2,1] 的和最大，为 6 。
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums = [1]
+输出：1
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums = [5,4,-1,7,8]
+输出：23
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= nums.length &lt;= 105</code></li> <li><code>-104 &lt;= nums[i] &lt;= 104</code></li></ul> <p><strong>进阶：</strong> 如果你已经实现复杂度为 <code>O(n)</code> 的解法，尝试使用更为精妙的 <strong>分治法</strong> 求解。</p> <p><strong>1.动态规划</strong></p> <p>dp五部曲：</p> <p>1.dp数组以及下标含义</p> <p>2.递推公式</p> <p>3.dp数组如何初始化</p> <p>4.遍历顺序</p> <p>5.打印数组</p> <p>dp[i]代表以i为结尾的数组的最大连续子序列的和，时间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>let dp = [];
+dp[0] = nums[0];
+let result = nums[0];
+for (let i = 1; i &lt; nums.length; i++) {
+    dp[i] = Math.max(dp[i - 1] + nums[i], nums[i]);
+    if (dp[i] &gt; result) result = dp[i];
+}
+return result;
+</code></pre></div><p><strong>2.贪心</strong></p> <p>当前求和为负数时就从下一个元素重新开始计算，因为负数加负数会越来越小，而负数对正数来说是拖累，因此不管后面的数是正数还是负数，都应该舍弃当前的求和，时间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>let result = nums[0];
+let sum = 0;
+for (let i = 0; i &lt; nums.length; i++) {
+    sum += nums[i];
+    if (sum &gt; result) result = sum;
+    if (sum &lt; 0) sum = 0;
+}
+return result;
+</code></pre></div><h2 id="_102-二叉树的层序遍历"><a href="#_102-二叉树的层序遍历" class="header-anchor">#</a> 102.二叉树的层序遍历</h2> <p>给你二叉树的根节点 <code>root</code> ，返回其节点值的 <strong>层序遍历</strong> 。 （即逐层地，从左到右访问所有节点）。</p> <p><strong>示例 1：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2021/02/19/tree1.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [3,9,20,null,null,15,7]
+输出：[[3],[9,20],[15,7]]
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [1]
+输出：[[1]]
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = []
+输出：[]
+</code></pre></div><p><strong>提示：</strong></p> <ul><li>树中节点数目在范围 <code>[0, 2000]</code> 内</li> <li><code>-1000 &lt;= Node.val &lt;= 1000</code></li></ul> <p><strong>1.队列法</strong></p> <p>用队列收集元素，每次弹出元素时都压入它的左右子元素，当队列为空时结束循环，时间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>if (!root) return [];
+let result = [];
+let queue = [root];
+while (queue.length) {
+    let subRes = [];
+    let size = queue.length;
+    for (let i = 0; i &lt; size; i++) {
+        let cur = queue.shift();
+        subRes.push(cur.val);
+        if (cur.left) queue.push(cur.left);
+        if (cur.right) queue.push(cur.right);
+    }
+    result.push(subRes);
+}
+return result;
+</code></pre></div><h2 id="_121-买卖股票的最佳时机"><a href="#_121-买卖股票的最佳时机" class="header-anchor">#</a> 121.买卖股票的最佳时机</h2> <p>给定一个数组 <code>prices</code> ，它的第 <code>i</code> 个元素 <code>prices[i]</code> 表示一支给定股票第 <code>i</code> 天的价格。</p> <p>你只能选择 <strong>某一天</strong> 买入这只股票，并选择在 <strong>未来的某一个不同的日子</strong> 卖出该股票。设计一个算法来计算你所能获取的最大利润。</p> <p>返回你可以从这笔交易中获取的最大利润。如果你不能获取任何利润，返回 <code>0</code> 。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：[7,1,5,3,6,4]
+输出：5
+解释：在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5 。
+     注意利润不能是 7-1 = 6, 因为卖出价格需要大于买入价格；同时，你不能在买入前卖出股票。
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：prices = [7,6,4,3,1]
+输出：0
+解释：在这种情况下, 没有交易完成, 所以最大利润为 0。
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= prices.length &lt;= 105</code></li> <li><code>0 &lt;= prices[i] &lt;= 104</code></li></ul> <p><strong>1.动态规划</strong></p> <p>dp[i]代表前i天的最大利润，时间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>let dp = [0];
+let index = 0;
+let result = 0;
+for (let i = 1; i &lt; prices.length; i++) {
+    if (prices[i] &lt; prices[index]) index = i;
+    dp[i] = Math.max(dp[i - 1], prices[i] - prices[index]);
+    if (dp[i] &gt; result) result = dp[i];
+}
+return result;
+</code></pre></div><p><strong>2.贪心</strong></p> <p>时间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>let max = 0;
+let minPrice = prices[0];
+for (let i = 1; i &lt; prices.length; i++) {
+    minPrice = Math.min(prices[i], minPrice);
+    max = Math.max(max, prices[i] - minPrice)
+}
+return max;
+</code></pre></div><h2 id="_15-三数之和"><a href="#_15-三数之和" class="header-anchor">#</a> 15.三数之和</h2> <p>给你一个整数数组 <code>nums</code> ，判断是否存在三元组 <code>[nums[i], nums[j], nums[k]]</code> 满足 <code>i != j</code>、<code>i != k</code> 且 <code>j != k</code> ，同时还满足 <code>nums[i] + nums[j] + nums[k] == 0</code> 。请你返回所有和为 <code>0</code> 且不重复的三元组。</p> <p><strong>注意：</strong> 答案中不可以包含重复的三元组。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums = [-1,0,1,2,-1,-4]
+输出：[[-1,-1,2],[-1,0,1]]
+解释：
+nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0 。
+nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0 。
+nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0 。
+不同的三元组是 [-1,0,1] 和 [-1,-1,2] 。
+注意，输出的顺序和三元组的顺序并不重要。
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums = [0,1,1]
+输出：[]
+解释：唯一可能的三元组和不为 0 。
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums = [0,0,0]
+输出：[[0,0,0]]
+解释：唯一可能的三元组和为 0 。
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>3 &lt;= nums.length &lt;= 3000</code></li> <li><code>-105 &lt;= nums[i] &lt;= 105</code></li></ul> <p><strong>1.双指针法</strong></p> <p>虽说是双指针法，其实是三指针i，left，right，先固定i，然后移动left和right，这一过程中需要注意两次去重，一次是i指针的去重，另一次是left和right指针的去重，时间复杂度O(n^2)：</p> <div class="language- extra-class"><pre class="language-text"><code>let result = [];
+nums.sort((a, b) =&gt; {
+    return a - b;
+});
+for (let i = 0; i &lt; nums.length; i++) {
+    if (nums[i] &gt; 0) break;
+    if (i &gt; 0 &amp;&amp; nums[i] === nums[i - 1]) continue;
+    let left = i + 1;
+    let right = nums.length - 1;
+    while (right &gt; left) {
+        if (nums[i] + nums[left] + nums[right] &gt; 0) right--;
+        else if (nums[i] + nums[left] + nums[right] &lt; 0) left++;
+        else {
+            result.push([nums[i], nums[left], nums[right]]);
+            while (right &gt; left &amp;&amp; nums[right] === nums[right - 1]) right--;
+            while (right &gt; left &amp;&amp; nums[left] === nums[left + 1]) left++;
+            left++;
+            right--;
+        }
+    }
+}
+return result;
+</code></pre></div><h2 id="_112-路径总和"><a href="#_112-路径总和" class="header-anchor">#</a> 112.路径总和</h2> <p>给你二叉树的根节点 <code>root</code> 和一个表示目标和的整数 <code>targetSum</code> 。判断该树中是否存在 <strong>根节点到叶子节点</strong> 的路径，这条路径上所有节点值相加等于目标和 <code>targetSum</code> 。如果存在，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p> <p><strong>叶子节点</strong> 是指没有子节点的节点。</p> <p><strong>示例 1：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2021/01/18/pathsum1.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [5,4,8,11,null,13,4,7,2,null,null,null,1], targetSum = 22
+输出：true
+解释：等于目标和的根节点到叶节点路径如上图所示。
+</code></pre></div><p><strong>示例 2：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2021/01/18/pathsum2.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [1,2,3], targetSum = 5
+输出：false
+解释：树中存在两条根节点到叶子节点的路径：
+(1 --&gt; 2): 和为 3
+(1 --&gt; 3): 和为 4
+不存在 sum = 5 的根节点到叶子节点的路径。
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [], targetSum = 0
+输出：false
+解释：由于树是空的，所以不存在根节点到叶子节点的路径。
+</code></pre></div><p><strong>提示：</strong></p> <ul><li>树中节点的数目在范围 <code>[0, 5000]</code> 内</li> <li><code>-1000 &lt;= Node.val &lt;= 1000</code></li> <li><code>-1000 &lt;= targetSum &lt;= 1000</code></li></ul> <p><strong>1.递归法</strong></p> <p>每遍历到一个节点就用目标值减去节点的值，当目标值为0且节点是叶子节点则成功找到，时间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>function dfs(root, val) {
+    if (!root) return false;
+    if (val - root.val === 0 &amp;&amp; (!root.left) &amp;&amp; (!root.right)) return true;
+    return dfs(root.left, val - root.val) || dfs(root.right, val - root.val);
+}
+return dfs(root, targetSum);
+</code></pre></div><h2 id="_141-环形链表"><a href="#_141-环形链表" class="header-anchor">#</a> 141.环形链表</h2> <p>给你一个链表的头节点 <code>head</code> ，判断链表中是否有环。</p> <p>如果链表中有某个节点，可以通过连续跟踪 <code>next</code> 指针再次到达，则链表中存在环。 为了表示给定链表中的环，评测系统内部使用整数 <code>pos</code> 来表示链表尾连接到链表中的位置（索引从 0 开始）。<strong>注意：<code>pos</code> 不作为参数进行传递</strong> 。仅仅是为了标识链表的实际情况。</p> <p><em>如果链表中存在环</em> ，则返回 <code>true</code> 。 否则，返回 <code>false</code> 。</p> <p><strong>示例 1：</strong></p> <p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：head = [3,2,0,-4], pos = 1
+输出：true
+解释：链表中有一个环，其尾部连接到第二个节点。
+</code></pre></div><p><strong>示例 2：</strong></p> <p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test2.png" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：head = [1,2], pos = 0
+输出：true
+解释：链表中有一个环，其尾部连接到第一个节点。
+</code></pre></div><p><strong>示例 3：</strong></p> <p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test3.png" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：head = [1], pos = -1
+输出：false
+解释：链表中没有环。
+</code></pre></div><p><strong>提示：</strong></p> <ul><li>链表中节点的数目范围是 <code>[0, 104]</code></li> <li><code>-105 &lt;= Node.val &lt;= 105</code></li> <li><code>pos</code> 为 <code>-1</code> 或者链表中的一个 <strong>有效索引</strong> 。</li></ul> <p><strong>进阶：</strong> 你能用 <code>O(1)</code>（即，常量）内存解决此问题吗？</p> <p><strong>1.节点数法</strong></p> <p>已知节点数最多10000个，则可设置一个累加数值，当大于10000时必然存在环，时间复杂度O(n)，空间复杂度O(1)：</p> <p>此方法纯粹为了解题，不推荐使用：</p> <div class="language- extra-class"><pre class="language-text"><code>let k = 0;
+while (head !== null) {
+    k++;
+    head = head.next;
+    if (k &gt; 10000) return true;
+}
+return false;
+</code></pre></div><p><strong>2.哈希表法</strong></p> <p>通过哈希表存放指针地址，如果新加入的指针地址已存在，则说明存在环，时间复杂度O(n)，空间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>let map = new Map();
+while (head) {
+    if (map.get(head)) return true;
+    else map.set(head, true);
+    head = head.next;
+}
+return false;
+</code></pre></div><p><strong>3.快慢指针法</strong></p> <p>设置慢指针slow，快指针fast，慢指针一次走一步，快指针一次走两步，如果存在环，则快慢指针必定会在某时刻重合，时间复杂度O(n)，空间复杂度O(1)：</p> <div class="language- extra-class"><pre class="language-text"><code>if (!head) return false;
+let slow = head;
+let fast = head;
+while (fast.next &amp;&amp; fast.next.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+    if (slow === fast) return true;
+}
+return false;
+</code></pre></div><h2 id="_70-爬楼梯"><a href="#_70-爬楼梯" class="header-anchor">#</a> 70.爬楼梯</h2> <p>假设你正在爬楼梯。需要 <code>n</code> 阶你才能到达楼顶。</p> <p>每次你可以爬 <code>1</code> 或 <code>2</code> 个台阶。你有多少种不同的方法可以爬到楼顶呢？</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：n = 2
+输出：2
+解释：有两种方法可以爬到楼顶。
+1. 1 阶 + 1 阶
+2. 2 阶
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：n = 3
+输出：3
+解释：有三种方法可以爬到楼顶。
+1. 1 阶 + 1 阶 + 1 阶
+2. 1 阶 + 2 阶
+3. 2 阶 + 1 阶
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= n &lt;= 45</code></li></ul> <p><strong>1.动态规划</strong></p> <p>因为一次只能爬1或2个阶梯，所以到达第i阶肯定是从第i-1阶爬1阶或第i-2阶爬2阶上来的，因此爬到前两阶的方法总和就是爬到第i阶的方法总和，dp[i]代表到达i阶有dp[i]种方法，时间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>let dp = [];
+dp[1] = 1, dp[2] = 2;
+if (n === 1 || n === 2) return dp[n];
+for (let i = 3; i &lt;= n; i++) {
+    dp[i] = dp[i - 1] + dp[i - 2];
+}
+return dp[n];
+</code></pre></div><h2 id="_215-数组中的第k个最大元素"><a href="#_215-数组中的第k个最大元素" class="header-anchor">#</a> 215.数组中的第K个最大元素</h2> <p>给定整数数组 <code>nums</code> 和整数 <code>k</code>，请返回数组中第 <code>k</code> 个最大的元素。</p> <p>请注意，你需要找的是数组排序后的第 <code>k</code> 个最大的元素，而不是第 <code>k</code> 个不同的元素。</p> <p>你必须设计并实现时间复杂度为 <code>O(n)</code> 的算法解决此问题。</p> <p><strong>示例 1:</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入: [3,2,1,5,6,4], k = 2
+输出: 5
+</code></pre></div><p><strong>示例 2:</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入: [3,2,3,1,2,4,5,5,6], k = 4
+输出: 4
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= k &lt;= nums.length &lt;= 105</code></li> <li><code>-104 &lt;= nums[i] &lt;= 104</code></li></ul> <p><strong>1.数组法</strong></p> <p>将元素作为数组下标存入，时间复杂度O(n)，但如果元素之间大小差距大则会产生很多不必要的遍历，不推荐这个方法：</p> <div class="language- extra-class"><pre class="language-text"><code>let arr = [];
+for (let i = 0; i &lt; nums.length; i++) {
+    if (arr[nums[i]] === undefined) arr[nums[i]] = 1;
+    else arr[nums[i]]++;
+}
+for (let i = arr.length - 1; ; i--) {
+    if (arr[i] !== undefined &amp;&amp; arr[i] &gt;= 1) k -= arr[i];
+    if (k &lt;= 0) return i;
+}
+</code></pre></div><p><strong>2.小顶堆</strong></p> <p>通过构造一个前k个最大元素小顶堆来解决，小顶堆上的任意节点值都必须小于等于其左右子节点值，即堆顶是最小值。</p> <p>可以从数组中取出k个元素构造一个小顶堆，然后将其余元素与小顶堆对比，如果大于堆顶则替换堆顶，然后堆化，所有元素遍历完成后，堆中的堆顶即为第k个最大值。时间复杂度O(nlogk)，空间复杂度O(k)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var findKthLargest = function (nums, k) {
+    // 从 nums 中取出前 k 个数，构建一个小顶堆
+    let heap = [,], i = 0
+    while(i &lt; k) {
+       heap.push(nums[i++]) 
+    }
+    buildHeap(heap, k)
+    
+    // 从 k 位开始遍历数组
+    for(let i = k; i &lt; nums.length; i++) {
+        if(heap[1] &lt; nums[i]) {
+            // 替换并堆化
+            heap[1] = nums[i]
+            heapify(heap, k, 1)
+        }
+    }
+    
+    // 返回堆顶元素
+    return heap[1]
+};
+
+// 原地建堆，从后往前，自上而下式建小顶堆
+let buildHeap = (arr, k) =&gt; {
+    if(k === 1) return
+    // 从最后一个非叶子节点开始，自上而下式堆化
+    for(let i = Math.floor(k/2); i&gt;=1 ; i--) {
+        heapify(arr, k, i)
+    }
+}
+
+// 堆化
+let heapify = (arr, k, i) =&gt; {
+    // 自上而下式堆化
+    while(true) {
+        let minIndex = i
+        if(2*i &lt;= k &amp;&amp; arr[2*i] &lt; arr[i]) {
+            minIndex = 2*i
+        }
+        if(2*i+1 &lt;= k &amp;&amp; arr[2*i+1] &lt; arr[minIndex]) {
+            minIndex = 2*i+1
+        }
+        if(minIndex !== i) {
+            swap(arr, i, minIndex)
+            // 交换后要重新处理被交换节点，因为换下去的节点可能比被交换节点的子节点大
+            i = minIndex
+        } else {
+            break
+        }
+    }
+}
+
+// 交换
+let swap = (arr, i , j) =&gt; {
+    let temp = arr[i]
+    arr[i] = arr[j]
+    arr[j] = temp
+}
+</code></pre></div><p><strong>3.快速选择</strong></p> <p>运用快速排序的理念，每次快排都能确定一个元素的最终位置，把快排改成降序，如果当前确定的这个元素的位置正好与k-1相同，则说明已经找到了第k大的元素，可以提前结束快排，<strong>注意，在partition中需要先把pivot放在arr的最后面，避免它影响partition过程，否则会出错</strong>，时间复杂度O(n)，空间复杂度O(1)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var findKthLargest = function (nums, k) {
+	let left = 0;
+    let right = nums.length - 1;
+    while (left &lt;= right) {
+        let mid = partition(nums, left, right);
+        if (mid === k - 1) return nums[mid];
+        mid &gt; k - 1 ? (right = mid - 1) : (left = mid + 1);
+    }
+}
+
+let partition = (nums, left, right) =&gt; {
+	let mid = Math.floor(left + (right - left) / 2);
+    let pivot = nums[mid];
+    // 把pivot放在arr的最后面
+    [nums[mid], nums[right]] = [nums[right], nums[mid]];
+    let i = left;
+    // 把pivot排除在外,不对pivot进行排序
+    let j = right - 1;
+	while (i &lt;= j) {
+        while (pivot &lt; nums[i]) i++;
+        while (pivot &gt; nums[j]) j--;
+        if (i &lt;= j) {
+            [nums[i], nums[j]] = [nums[j], nums[i]];
+            i++;
+            j--;
+        }
+    }
+    // 因为arr[i]是属于left的,pivot也是属于left的
+    // 故我们可以把原本保护起来的pivot和现在数组的中间值交换
+    [nums[i], nums[right]] = [nums[right], nums[i]];
+    return i;
+}
+</code></pre></div><h2 id="_5-最长回文子串"><a href="#_5-最长回文子串" class="header-anchor">#</a> 5.最长回文子串</h2> <p>给你一个字符串 <code>s</code>，找到 <code>s</code> 中最长的 回文 子串。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：s = &quot;babad&quot;
+输出：&quot;bab&quot;
+解释：&quot;aba&quot; 同样是符合题意的答案。
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：s = &quot;cbbd&quot;
+输出：&quot;bb&quot;
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= s.length &lt;= 1000</code></li> <li><code>s</code> 仅由数字和英文字母组成</li></ul> <p><strong>1.中心扩散法</strong></p> <p>先选定一个中心点，然后通过左右指针分别往两边扩散的方式去寻找最长回文子串，注意区分奇数与偶数长度的子串，时间复杂度O(n^2)，空间复杂度O(1)：</p> <div class="language- extra-class"><pre class="language-text"><code>let maxLen = 0;
+let maxIndex = 0;
+for (let i = 0; i &lt; s.length; i++) {
+    // 奇数长度回文子串
+    let left = (right = i);
+    while (left &gt;= 0 &amp;&amp; right &lt;= s.length - 1 &amp;&amp; s[left] === s[right]) {
+        if (right - left + 1 &gt; maxLen) {
+            maxLen = right - left + 1;
+            maxIndex = left;
+        }
+        left--;
+        right++;
+    }
+    // 偶数长度回文子串
+    left = i;
+    right = i + 1;
+    while (left &gt;= 0 &amp;&amp; right &lt;= s.length - 1 &amp;&amp; s[left] === s[right]) {
+        if (right - left + 1 &gt; maxLen) {
+            maxLen = right - left + 1;
+            maxIndex = left;
+        }
+        left--;
+        right++;
+    }
+}
+return s.substr(maxIndex, maxLen);
+</code></pre></div><p><strong>2.动态规划</strong></p> <p>维护一个二维dp数组，dp[i][j]代表以i为起始，j为结尾的子串是否是回文串</p> <p>①s[i]≠s[j]：dp[i][j]=false</p> <p>②s[i]=s[j]：dp[i][j]=j-i&lt;3||dp[i+1][j-1]</p> <p>将dp数组填充完毕后，遍历dp数组并根据下标索引计算最长的回文子串</p> <p>时间复杂度O(n^2)，空间复杂度O(n^2)：</p> <div class="language- extra-class"><pre class="language-text"><code>let m = s.length;
+let dp = Array(m).fill().map(() =&gt; Array(m));
+for (let i = 0; i &lt; m; i++) dp[i][i] = true;
+for (let j = 1; j &lt; m; j++) {
+    for (let i = 0; i &lt; j; i++) {
+        if (s[i] !== s[j]) dp[i][j] = false;
+        else {
+            dp[i][j] = j - i &lt; 3 || dp[i + 1][j - 1];
+        }
+    }
+}
+let maxLen = 1;
+let maxIndex = 0;
+for (let i = 0; i &lt; m; i++) {
+    for (let j = i + 1; j &lt; m; j++) {
+        if (dp[i][j] &amp;&amp; j - i + 1 &gt; maxLen) {
+            maxLen = j - i + 1;
+            maxIndex = i;
+        }
+    }
+}
+return s.substr(maxIndex, maxLen);
+</code></pre></div><h2 id="_146-lru缓存"><a href="#_146-lru缓存" class="header-anchor">#</a> 146.LRU缓存</h2> <p>请你设计并实现一个满足 <a href="https://baike.baidu.com/item/LRU" target="_blank" rel="noopener noreferrer">LRU (最近最少使用) 缓存<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 约束的数据结构。</p> <p>实现 <code>LRUCache</code> 类：</p> <ul><li><code>LRUCache(int capacity)</code> 以 <strong>正整数</strong> 作为容量 <code>capacity</code> 初始化 LRU 缓存</li> <li><code>int get(int key)</code> 如果关键字 <code>key</code> 存在于缓存中，则返回关键字的值，否则返回 <code>-1</code> 。</li> <li><code>void put(int key, int value)</code> 如果关键字 <code>key</code> 已经存在，则变更其数据值 <code>value</code> ；如果不存在，则向缓存中插入该组 <code>key-value</code> 。如果插入操作导致关键字数量超过 <code>capacity</code> ，则应该 <strong>逐出</strong> 最久未使用的关键字。</li></ul> <p>函数 <code>get</code> 和 <code>put</code> 必须以 <code>O(1)</code> 的平均时间复杂度运行。</p> <p><strong>示例：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入
+[&quot;LRUCache&quot;, &quot;put&quot;, &quot;put&quot;, &quot;get&quot;, &quot;put&quot;, &quot;get&quot;, &quot;put&quot;, &quot;get&quot;, &quot;get&quot;, &quot;get&quot;]
+[[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]
+输出
+[null, null, null, 1, null, -1, null, -1, 3, 4]
+
+解释
+LRUCache lRUCache = new LRUCache(2);
+lRUCache.put(1, 1); // 缓存是 {1=1}
+lRUCache.put(2, 2); // 缓存是 {1=1, 2=2}
+lRUCache.get(1);    // 返回 1
+lRUCache.put(3, 3); // 该操作会使得关键字 2 作废，缓存是 {1=1, 3=3}
+lRUCache.get(2);    // 返回 -1 (未找到)
+lRUCache.put(4, 4); // 该操作会使得关键字 1 作废，缓存是 {4=4, 3=3}
+lRUCache.get(1);    // 返回 -1 (未找到)
+lRUCache.get(3);    // 返回 3
+lRUCache.get(4);    // 返回 4
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= capacity &lt;= 3000</code></li> <li><code>0 &lt;= key &lt;= 10000</code></li> <li><code>0 &lt;= value &lt;= 10^5</code></li> <li>最多调用 <code>2 * 10^5</code> 次 <code>get</code> 和 <code>put</code></li></ul> <p><strong>1.哈希表+双向链表</strong></p> <p>哈希表存key和指针地址，指针存放key和value，用双向链表确定顺序，时间复杂度O(1)：</p> <div class="language- extra-class"><pre class="language-text"><code>class Node {
+    constructor(key, value) {
+        this.key = key;
+        this.value = value;
+    }
+}
+
+class DoubleList {
+    constructor() {
+        this.head = new Node(0, 0);
+        this.tail = new Node(0, 0);
+        this.head.next = this.tail;
+        this.tail.prev = this.head;
+        this.size = 0;
+    }
+    addLast(node) {
+        node.prev = this.tail.prev;
+        node.next = this.tail;
+        node.prev.next = node;
+        this.tail.prev = node;
+        this.size++;
+    }
+    remove(node) {
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
+        this.size--;
+    }
+    removeFirst() {
+        const node = this.head.next;
+        this.remove(node);
+        return node;
+    }
+}
+
+/**
+ * @param {number} capacity
+ */
+var LRUCache = function (capacity) {
+    this.capacity = capacity;
+    this.map = new Map();
+    this.cache = new DoubleList();
+};
+
+/**
+ * @param {number} key
+ * @return {number}
+ */
+LRUCache.prototype.get = function (key) {
+    const { map, cache } = this;
+    if (!map.has(key)) return -1;
+    const node = map.get(key);
+    cache.remove(node);
+    cache.addLast(node);
+    return node.value;
+};
+
+/**
+ * @param {number} key
+ * @param {number} value
+ * @return {void}
+ */
+LRUCache.prototype.put = function (key, value) {
+    const { map, cache } = this;
+    if (!map.has(key)) {
+        const node = new Node(key, value);
+        map.set(key, node);
+        cache.addLast(node);
+        cache.size++;
+        if (map.size &gt; this.capacity) {
+            const firstNode = cache.removeFirst();
+            map.delete(firstNode.key);
+            cache.size--;
+        }
+    } else {
+        const node = map.get(key);
+        node.value = value;
+        cache.remove(node);
+        cache.addLast(node);
+    }
+};
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * var obj = new LRUCache(capacity)
+ * var param_1 = obj.get(key)
+ * obj.put(key,value)
+ */
+</code></pre></div><p><strong>2.JS哈希表</strong></p> <p>由于JS的哈希表本身就是有序的，因此不需要双向链表来确定顺序，只使用哈希表即可，每次访问或者更新数据时，先将原数据删除，然后重新插入，即可使数据位于哈希表末尾，若长度溢出，则删除哈希表首部数据即可，时间复杂度O(1)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number} capacity
+ */
+var LRUCache = function (capacity) {
+    this.capacity = capacity;
+    this.map = new Map();
+};
+
+/**
+ * @param {number} key
+ * @return {number}
+ */
+LRUCache.prototype.get = function (key) {
+    if (this.map.get(key) !== undefined) {
+        let value = this.map.get(key);
+        this.map.delete(key);
+        this.map.set(key, value);
+        return value;
+    } else return -1;
+};
+
+/**
+ * @param {number} key
+ * @param {number} value
+ * @return {void}
+ */
+LRUCache.prototype.put = function (key, value) {
+    if (this.map.get(key) !== undefined) {
+        this.map.delete(key);
+        this.map.set(key, value);
+    } else {
+        this.map.set(key, value);
+        if (this.map.size &gt; this.capacity) {
+            this.map.delete(this.map.keys().next().value);
+        }
+    }
+};
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * var obj = new LRUCache(capacity)
+ * var param_1 = obj.get(key)
+ * obj.put(key,value)
+ */
+</code></pre></div><h2 id="_21-合并两个有序链表"><a href="#_21-合并两个有序链表" class="header-anchor">#</a> 21.合并两个有序链表</h2> <p>将两个升序链表合并为一个新的 <strong>升序</strong> 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。</p> <p><strong>示例 1：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2020/10/03/merge_ex1.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：l1 = [1,2,4], l2 = [1,3,4]
+输出：[1,1,2,3,4,4]
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：l1 = [], l2 = []
+输出：[]
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：l1 = [], l2 = [0]
+输出：[0]
+</code></pre></div><p><strong>提示：</strong></p> <ul><li>两个链表的节点数目范围是 <code>[0, 50]</code></li> <li><code>-100 &lt;= Node.val &lt;= 100</code></li> <li><code>l1</code> 和 <code>l2</code> 均按 <strong>非递减顺序</strong> 排列</li></ul> <p><strong>1.双指针法</strong></p> <p>依次比较list1与list2节点的数值，将数值小的加入新链表中，注意可以生成一个dummy节点当做哑节点（头节点），避免特殊的边界处理，方便操作，时间复杂度O(n+m)，空间复杂度O(1)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} list1
+ * @param {ListNode} list2
+ * @return {ListNode}
+ */
+var mergeTwoLists = function (list1, list2) {
+    let current = new ListNode();
+    let dummy = current;
+    while (list1 &amp;&amp; list2) {
+        if (list1.val &lt; list2.val) {
+            current.next = list1;
+            list1 = list1.next;
+        } else {
+            current.next = list2;
+            list2 = list2.next;
+        }
+        current = current.next;
+    }
+    if (list1) {
+        current.next = list1;
+    }
+    if (list2) {
+        current.next = list2;
+    }
+    return dummy.next;
+};
+</code></pre></div><h2 id="_912-排序数组-手撕快速排序"><a href="#_912-排序数组-手撕快速排序" class="header-anchor">#</a> 912.排序数组（手撕快速排序）</h2> <p>给你一个整数数组 <code>nums</code>，请你将该数组升序排列。</p> <p>你必须在 <strong>不使用任何内置函数</strong> 的情况下解决问题，时间复杂度为 <code>O(nlog(n))</code>，并且空间复杂度尽可能小。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums = [5,2,3,1]
+输出：[1,2,3,5]
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums = [5,1,1,2,0,0]
+输出：[0,0,1,1,2,5]
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= nums.length &lt;= 5 * 104</code></li> <li><code>-5 * 104 &lt;= nums[i] &lt;= 5 * 104</code></li></ul> <p><strong>1.快速排序</strong></p> <p>时间复杂度O(nlogn)，空间复杂度O(logn)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var sortArray = function (nums) {
+    if (!nums || nums.length &lt;= 1) return nums;
+    quickSort(nums, 0, nums.length - 1);
+    return nums;
+};
+
+let quickSort = (arr, left, right) =&gt; {
+    if (left &lt; right) {
+        let pivotIndex = partition(arr, left, right);
+        quickSort(arr, left, pivotIndex - 1);
+        quickSort(arr, pivotIndex + 1, right);
+    }
+};
+
+let partition = (arr, left, right) =&gt; {
+    let mid = Math.floor(left + (right - left) / 2);
+    let pivot = arr[mid];
+    [arr[mid], arr[right]] = [arr[right], arr[mid]];
+    let i = left;
+    let j = right - 1;
+    while (i &lt;= j) {
+        while (pivot &gt; arr[i]) i++;
+        while (pivot &lt; arr[j]) j--;
+        if (i &lt;= j) {
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+            i++;
+            j--;
+        }
+    }
+    [arr[i], arr[right]] = [arr[right], arr[i]];
+    return i;
+};
+</code></pre></div><h2 id="_54-螺旋矩阵"><a href="#_54-螺旋矩阵" class="header-anchor">#</a> 54.螺旋矩阵</h2> <p>给你一个 <code>m</code> 行 <code>n</code> 列的矩阵 <code>matrix</code> ，请按照 <strong>顺时针螺旋顺序</strong> ，返回矩阵中的所有元素。</p> <p><strong>示例 1：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2020/11/13/spiral1.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：matrix = [[1,2,3],[4,5,6],[7,8,9]]
+输出：[1,2,3,6,9,8,7,4,5]
+</code></pre></div><p><strong>示例 2：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2020/11/13/spiral.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
+输出：[1,2,3,4,8,12,11,10,9,5,6,7]
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>m == matrix.length</code></li> <li><code>n == matrix[i].length</code></li> <li><code>1 &lt;= m, n &lt;= 10</code></li> <li><code>-100 &lt;= matrix[i][j] &lt;= 100</code></li></ul> <p><strong>1.边界缩减法</strong></p> <p>维护4个变量边界，不断向中心缩减，注意while循环内每次只走一个方向，而不是一次走四个方向，每走完一轮都要出来判断是否退出循环，不然可能会重复插入元素，时间复杂度O(m*n)，空间复杂度O(m*n)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number[][]} matrix
+ * @return {number[]}
+ */
+var spiralOrder = function (matrix) {
+    let top = 0;
+    let bottom = matrix.length - 1;
+    let left = 0;
+    let right = matrix[0].length - 1;
+
+    let direction = &quot;right&quot;;
+    let result = [];
+
+    while (left &lt;= right &amp;&amp; top &lt;= bottom) {
+        if (direction === &quot;right&quot;) {
+            for (let i = left; i &lt;= right; i++) {
+                result.push(matrix[top][i]);
+            }
+            top++;
+            direction = &quot;down&quot;;
+        } else if (direction === &quot;down&quot;) {
+            for (let i = top; i &lt;= bottom; i++) {
+                result.push(matrix[i][right]);
+            }
+            right--;
+            direction = &quot;left&quot;;
+        } else if (direction === &quot;left&quot;) {
+            for (let i = right; i &gt;= left; i--) {
+                result.push(matrix[bottom][i]);
+            }
+            bottom--;
+            direction = &quot;top&quot;;
+        } else if (direction === &quot;top&quot;) {
+            for (let i = bottom; i &gt;= top; i--) {
+                result.push(matrix[i][left]);
+            }
+            left++;
+            direction = &quot;right&quot;;
+        }
+    }
+    return result;
+};
+</code></pre></div><h2 id="_200-岛屿数量"><a href="#_200-岛屿数量" class="header-anchor">#</a> 200.岛屿数量</h2> <p>给你一个由 <code>'1'</code>（陆地）和 <code>'0'</code>（水）组成的的二维网格，请你计算网格中岛屿的数量。</p> <p>岛屿总是被水包围，并且每座岛屿只能由水平方向和/或竖直方向上相邻的陆地连接形成。</p> <p>此外，你可以假设该网格的四条边均被水包围。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：grid = [
+  [&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;0&quot;],
+  [&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;],
+  [&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;],
+  [&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;]
+]
+输出：1
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：grid = [
+  [&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;],
+  [&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;],
+  [&quot;0&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;],
+  [&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;1&quot;,&quot;1&quot;]
+]
+输出：3
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>m == grid.length</code></li> <li><code>n == grid[i].length</code></li> <li><code>1 &lt;= m, n &lt;= 300</code></li> <li><code>grid[i][j]</code> 的值为 <code>'0'</code> 或 <code>'1'</code></li></ul> <p><strong>1.深度优先遍历&amp;沉没法</strong></p> <p>直接遍历这个二维矩阵，每碰到一个“1”，就通过深度优先的方式一直“沉没”它以及它周围的“1”，这样每次dfs之后都能沉没一整个岛屿，每沉没一个岛屿就计数+1，沉没的岛屿总数就是总的岛屿数量，时间复杂度O(m*n)，空间复杂度O(m*n)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {character[][]} grid
+ * @return {number}
+ */
+var numIslands = function (grid) {
+    let dfs = (i, j) =&gt; {
+        if (
+            i &lt; 0 ||
+            i &gt;= grid.length ||
+            j &lt; 0 ||
+            j &gt;= grid[0].length ||
+            grid[i][j] === &quot;0&quot;
+        )
+            return;
+        grid[i][j] = &quot;0&quot;;
+        dfs(i - 1, j);
+        dfs(i + 1, j);
+        dfs(i, j - 1);
+        dfs(i, j + 1);
+    };
+
+    let count = 0;
+    for (let i = 0; i &lt; grid.length; i++) {
+        for (let j = 0; j &lt; grid[0].length; j++) {
+            if (grid[i][j] === &quot;1&quot;) {
+                dfs(i, j);
+                count++;
+            }
+        }
+    }
+    return count;
+};
+</code></pre></div><h2 id="_129-求根节点到叶节点数字之和"><a href="#_129-求根节点到叶节点数字之和" class="header-anchor">#</a> 129.求根节点到叶节点数字之和</h2> <p>给你一个二叉树的根节点 <code>root</code> ，树中每个节点都存放有一个 <code>0</code> 到 <code>9</code> 之间的数字。</p> <p>每条从根节点到叶节点的路径都代表一个数字：</p> <ul><li>例如，从根节点到叶节点的路径 <code>1 -&gt; 2 -&gt; 3</code> 表示数字 <code>123</code> 。</li></ul> <p>计算从根节点到叶节点生成的 <strong>所有数字之和</strong> 。</p> <p><strong>叶节点</strong> 是指没有子节点的节点。</p> <p><strong>示例 1：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2021/02/19/num1tree.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [1,2,3]
+输出：25
+解释：
+从根到叶子节点路径 1-&gt;2 代表数字 12
+从根到叶子节点路径 1-&gt;3 代表数字 13
+因此，数字总和 = 12 + 13 = 25
+</code></pre></div><p><strong>示例 2：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2021/02/19/num2tree.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [4,9,0,5,1]
+输出：1026
+解释：
+从根到叶子节点路径 4-&gt;9-&gt;5 代表数字 495
+从根到叶子节点路径 4-&gt;9-&gt;1 代表数字 491
+从根到叶子节点路径 4-&gt;0 代表数字 40
+因此，数字总和 = 495 + 491 + 40 = 1026
+</code></pre></div><p><strong>提示：</strong></p> <ul><li>树中节点的数目在范围 <code>[1, 1000]</code> 内</li> <li><code>0 &lt;= Node.val &lt;= 9</code></li> <li>树的深度不超过 <code>10</code></li></ul> <p><strong>1.dfs</strong></p> <p>时间复杂度O(n)，空间复杂度O(h)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var sumNumbers = function (root) {
+    let sum = 0;
+    let dfs = (root, num) =&gt; {
+        num = num * 10 + root.val;
+        if (!root.left &amp;&amp; !root.right) {
+            sum += num;
+        }
+        if (root.left) dfs(root.left, num);
+        if (root.right) dfs(root.right, num);
+
+    }
+    dfs(root, 0);
+    return sum;
+};
+</code></pre></div><p><strong>2.bfs</strong></p> <p>采用层序遍历的方式，但是要多维护一个numQueue数组来存储临时的数值，时间复杂度O(n)，空间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var sumNumbers = function (root) {
+    let sum = 0;
+    let queue = [root];
+    let numQueue = [root.val];
+    while (queue.length) {
+        let size = queue.length;
+        for (let i = 0; i &lt; size; i++) {
+            let cur = queue.shift();
+            let curNum = numQueue.shift();
+            if (!cur.left &amp;&amp; !cur.right) sum += curNum;
+            if (cur.left) {
+                queue.push(cur.left);
+                numQueue.push(curNum * 10 + cur.left.val);
+            }
+            if (cur.right) {
+                queue.push(cur.right);
+                numQueue.push(curNum * 10 + cur.right.val);
+            }
+        }
+    }
+    return sum;
+};
+</code></pre></div><h2 id="_704-二分查找"><a href="#_704-二分查找" class="header-anchor">#</a> 704.二分查找</h2> <p>给定一个 <code>n</code> 个元素有序的（升序）整型数组 <code>nums</code> 和一个目标值 <code>target</code> ，写一个函数搜索 <code>nums</code> 中的 <code>target</code>，如果目标值存在返回下标，否则返回 <code>-1</code>。
+<strong>示例 1:</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入: nums = [-1,0,3,5,9,12], target = 9
+输出: 4
+解释: 9 出现在 nums 中并且下标为 4
+</code></pre></div><p><strong>示例 2:</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入: nums = [-1,0,3,5,9,12], target = 2
+输出: -1
+解释: 2 不存在 nums 中因此返回 -1
+</code></pre></div><p><strong>提示：</strong></p> <ol><li>你可以假设 <code>nums</code> 中的所有元素是不重复的。</li> <li><code>n</code> 将在 <code>[1, 10000]</code>之间。</li> <li><code>nums</code> 的每个元素都将在 <code>[-9999, 9999]</code>之间。</li></ol> <p><strong>1.二分查找</strong></p> <p>时间复杂度O(logn)，空间复杂度O(1)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var search = function (nums, target) {
+    let left = 0;
+    let right = nums.length - 1;
+    while (left &lt;= right) {
+        let mid = Math.floor(left + (right - left) / 2);
+        if (nums[mid] &lt; target) left = mid + 1;
+        else if (nums[mid] &gt; target) right = mid - 1;
+        else return mid;
+    }
+    return -1;
+};
+</code></pre></div><h2 id="_300-最长递增子序列"><a href="#_300-最长递增子序列" class="header-anchor">#</a> 300.最长递增子序列</h2> <p>给你一个整数数组 <code>nums</code> ，找到其中最长严格递增子序列的长度。</p> <p><strong>子序列</strong> 是由数组派生而来的序列，删除（或不删除）数组中的元素而不改变其余元素的顺序。例如，<code>[3,6,2,7]</code> 是数组 <code>[0,3,1,6,2,2,7]</code> 的子序列。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums = [10,9,2,5,3,7,101,18]
+输出：4
+解释：最长递增子序列是 [2,3,7,101]，因此长度为 4 。
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums = [0,1,0,3,2,3]
+输出：4
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：nums = [7,7,7,7,7,7,7]
+输出：1
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= nums.length &lt;= 2500</code></li> <li><code>-104 &lt;= nums[i] &lt;= 104</code></li></ul> <p><strong>进阶：</strong></p> <ul><li>你能将算法的时间复杂度降低到 <code>O(nlog(n))</code> 吗?</li></ul> <p><strong>1.动态规划</strong></p> <p>dp[i]的含义是以i结尾的最长严格递增子序列的长度，这里i要与之前的每个j比较，可以视为能否从这个j跳到i，如果可以，则dp[i] = Math.max(dp[i], dp[j] + 1)，之所以还要与dp[i]比较，是因为dp[i]在不断变化，只有比之前最大的dp[i]大，才需要更新，时间复杂度O(n^2)，空间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var lengthOfLIS = function (nums) {
+    let dp = new Array(nums.length).fill(1);
+    let result = 1;
+    for (let i = 1; i &lt; nums.length; i++) {
+        for (let j = 0; j &lt; i; j++) {
+            if (nums[i] &gt; nums[j]) {
+                dp[i] = Math.max(dp[i], dp[j] + 1);
+                result = Math.max(result, dp[i]);
+            }
+        }
+    }
+    return result;
+};
+</code></pre></div><p><strong>2贪心+二分法</strong></p> <p>维护一个最小递增子序列数组tails，始终选择当前能够构成的最小递增子序列的尾部元素，以便未来有更大的扩展空间，每次遇到新的nums[i]时，如果nums[i]大于tails里所有元素，就追加到tails末尾，如果nums[i]可以替换tails中某个元素（使用二分查找找到第一个≥nums[i]的位置），我们进行替换，以保持tails递增但尽量小，时间复杂度O(nlogn)，空间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var lengthOfLIS = function (nums) {
+    let tails = [];
+    for (let i = 0; i &lt; nums.length; i++) {
+        let left = 0;
+        let right = tails.length - 1;
+        while (left &lt;= right) {
+            let mid = Math.floor(left + (right - left) / 2);
+            if (tails[mid] &lt; nums[i]) {
+                left = mid + 1;
+            } else {
+                right = mid - 1; // 继续寻找第一个&gt;=nums[i]的位置
+            }
+        }
+        if (left &lt;= tails.length - 1) tails[left] = nums[i];
+        else tails.push(nums[i]);
+    }
+    return tails.length;
+};
+</code></pre></div><h2 id="_322-零钱兑换"><a href="#_322-零钱兑换" class="header-anchor">#</a> 322.零钱兑换</h2> <p>给你一个整数数组 <code>coins</code> ，表示不同面额的硬币；以及一个整数 <code>amount</code> ，表示总金额。</p> <p>计算并返回可以凑成总金额所需的 <strong>最少的硬币个数</strong> 。如果没有任何一种硬币组合能组成总金额，返回 <code>-1</code> 。</p> <p>你可以认为每种硬币的数量是无限的。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：coins = [1, 2, 5], amount = 11
+输出：3 
+解释：11 = 5 + 5 + 1
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：coins = [2], amount = 3
+输出：-1
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：coins = [1], amount = 0
+输出：0
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= coins.length &lt;= 12</code></li> <li><code>1 &lt;= coins[i] &lt;= 231 - 1</code></li> <li><code>0 &lt;= amount &lt;= 104</code></li></ul> <p><strong>1.动态规划</strong></p> <p>dp[j]表示总金额为j时需要的最少硬币数，dp[j] = Math.min(dp[j - coins[i]] + 1, dp[j])，此处+1是为了补上减掉的coins[i]这个硬币，加上的是硬币数，所以是1，时间复杂度O(n*m)，空间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number[]} coins
+ * @param {number} amount
+ * @return {number}
+ */
+var coinChange = function (coins, amount) {
+    let dp = Array(amount + 1).fill(Number.MAX_SAFE_INTEGER);
+    dp[0] = 0;
+    for (let i = 0; i &lt; coins.length; i++) {
+        for (let j = coins[i]; j &lt;= amount; j++) {
+            dp[j] = Math.min(dp[j - coins[i]] + 1, dp[j]);
+        }
+    }
+    return dp[amount] === Number.MAX_SAFE_INTEGER ? -1 : dp[amount];
+};
+</code></pre></div><h2 id="_93-复原ip地址"><a href="#_93-复原ip地址" class="header-anchor">#</a> 93.复原IP地址</h2> <p><strong>有效 IP 地址</strong> 正好由四个整数（每个整数位于 <code>0</code> 到 <code>255</code> 之间组成，且不能含有前导 <code>0</code>），整数之间用 <code>'.'</code> 分隔。</p> <ul><li>例如：<code>&quot;0.1.2.201&quot;</code> 和<code>&quot;192.168.1.1&quot;</code> 是 <strong>有效</strong> IP 地址，但是 <code>&quot;0.011.255.245&quot;</code>、<code>&quot;192.168.1.312&quot;</code> 和 <code>&quot;192.168@1.1&quot;</code> 是 <strong>无效</strong> IP 地址。</li></ul> <p>给定一个只包含数字的字符串 <code>s</code> ，用以表示一个 IP 地址，返回所有可能的<strong>有效 IP 地址</strong>，这些地址可以通过在 <code>s</code> 中插入 <code>'.'</code> 来形成。你 <strong>不能</strong> 重新排序或删除 <code>s</code> 中的任何数字。你可以按 <strong>任何</strong> 顺序返回答案。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：s = &quot;25525511135&quot;
+输出：[&quot;255.255.11.135&quot;,&quot;255.255.111.35&quot;]
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：s = &quot;0000&quot;
+输出：[&quot;0.0.0.0&quot;]
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：s = &quot;101023&quot;
+输出：[&quot;1.0.10.23&quot;,&quot;1.0.102.3&quot;,&quot;10.1.0.23&quot;,&quot;10.10.2.3&quot;,&quot;101.0.2.3&quot;]
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= s.length &lt;= 20</code></li> <li><code>s</code> 仅由数字组成</li></ul> <p><strong>1.回溯法</strong></p> <p>遍历字符串的同时往字符串中插入分隔符“.”，每分隔完一次就进行递归，并判断是否合法，递归结束则通过回溯寻找更多可能性，时间复杂度O(n^3)，空间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {string} s
+ * @return {string[]}
+ */
+var restoreIpAddresses = function (s) {
+    let result = [];
+    let backTracking = (s, startIndex, pointNums) =&gt; {
+        if (pointNums === 3) {
+            if (isValid(s, startIndex, s.length - 1)) {
+                result.push(s);
+            }
+            return;
+        }
+        for (let i = startIndex; i &lt; s.length; i++) {
+            if (isValid(s, startIndex, i)) {
+                s = s.slice(0, i + 1) + &quot;.&quot; + s.slice(i + 1);
+                pointNums++;
+                backTracking(s, i + 2, pointNums);
+                s = s.slice(0, i + 1) + s.slice(i + 2);
+                pointNums--;
+            }
+        }
+    };
+    let isValid = (s, startIndex, endIndex) =&gt; {
+        let str = s.substring(startIndex, endIndex + 1);
+        if (
+            (str.length &gt; 1 &amp;&amp; str[0] === &quot;0&quot;) ||
+            str.length &gt; 3 || str.length === 0 ||
+            parseInt(str) &gt; 255
+        )
+            return false;
+        return true;
+    };
+
+    backTracking(s, 0, 0);
+    return result;
+};
+</code></pre></div><h2 id="_22-括号生成"><a href="#_22-括号生成" class="header-anchor">#</a> 22.括号生成</h2> <p>数字 <code>n</code> 代表生成括号的对数，请你设计一个函数，用于能够生成所有可能的并且 <strong>有效的</strong> 括号组合。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：n = 3
+输出：[&quot;((()))&quot;,&quot;(()())&quot;,&quot;(())()&quot;,&quot;()(())&quot;,&quot;()()()&quot;]
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：n = 1
+输出：[&quot;()&quot;]
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= n &lt;= 8</code></li></ul> <p><strong>1.回溯法</strong></p> <p>只有当左括号数量小于等于右括号数量的时候才是合法的，时间复杂度O(2^n)，空间复杂度O(2^n)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number} n
+ * @return {string[]}
+ */
+var generateParenthesis = function (n) {
+    let result = [];
+    let s = &quot;(&quot;;
+    let backTracking = (s, left, right) =&gt; {
+        if (left &lt; right) return;
+        if (left === n &amp;&amp; right === n) {
+            result.push(s);
+            return;
+        }
+        if (left &lt; n) {
+            s += &quot;(&quot;;
+            backTracking(s, left + 1, right);
+            s = s.slice(0, -1);
+        }
+        if (right &lt; n) {
+            s += &quot;)&quot;;
+            backTracking(s, left, right + 1);
+            s = s.slice(0, -1);
+        }
+    };
+    backTracking(s, 1, 0);
+    return result;
+};
+</code></pre></div><h2 id="_94-二叉树的中序遍历"><a href="#_94-二叉树的中序遍历" class="header-anchor">#</a> 94.二叉树的中序遍历</h2> <p>给定一个二叉树的根节点 <code>root</code> ，返回 <em>它的 <strong>中序</strong> 遍历</em> 。</p> <p><strong>示例 1：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2020/09/15/inorder_1.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [1,null,2,3]
+输出：[1,3,2]
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = []
+输出：[]
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [1]
+输出：[1]
+</code></pre></div><p><strong>提示：</strong></p> <ul><li>树中节点数目在范围 <code>[0, 100]</code> 内</li> <li><code>-100 &lt;= Node.val &lt;= 100</code></li></ul> <p><strong>进阶:</strong> 递归算法很简单，你可以通过迭代算法完成吗？</p> <p><strong>1.递归法</strong></p> <p>二叉树的前中后序遍历，其递归写法都很类似，前序根左右，中序左根右，后序左右根，只需要在循环中按以上顺序递归，并在访问到根时将数据压入数组即可，时间复杂度O(n)，空间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var inorderTraversal = function (root) {
+    let result = [];
+    let traversal = (root) =&gt; {
+        if (root) {
+            traversal(root.left);
+            result.push(root.val);
+            traversal(root.right);
+        }
+    }
+    traversal(root);
+    return result;
+};
+</code></pre></div><p><strong>2.迭代法（非递归）</strong></p> <p>用栈来记录遍历的顺序，用result存储结果，如果当前节点存在，就一直往左走，如果不存在，则弹出栈顶元素，并加入result中，然后往右节点走，时间复杂度O(n)，空间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
+var inorderTraversal = function (root) {
+    let result = [];
+    let stack = [];
+    while(root || stack.length !== 0) {
+        if(root) {
+            stack.push(root);
+            root = root.left;
+        } else {
+            root = stack.pop();
+            result.push(root.val);
+            root = root.right;
+        }
+    }
+    return result;
+};
+</code></pre></div><h2 id="_104-二叉树的最大深度"><a href="#_104-二叉树的最大深度" class="header-anchor">#</a> 104.二叉树的最大深度</h2> <p>给定一个二叉树 <code>root</code> ，返回其最大深度。</p> <p>二叉树的 <strong>最大深度</strong> 是指从根节点到最远叶子节点的最长路径上的节点数。</p> <p><strong>示例 1：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2020/11/26/tmp-tree.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [3,9,20,null,null,15,7]
+输出：3
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [1,null,2]
+输出：2
+</code></pre></div><p><strong>提示：</strong></p> <ul><li>树中节点的数量在 <code>[0, 104]</code> 区间内。</li> <li><code>-100 &lt;= Node.val &lt;= 100</code></li></ul> <p><strong>1.dfs</strong></p> <p>时间复杂度O(n)，空间复杂度O(h)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
+var maxDepth = function (root) {
+    let maxDepth = 0;
+    let dfs = (root, depth) =&gt; {
+        if (!root) return;
+        depth++;
+        if (maxDepth &lt; depth) maxDepth = depth;
+        if (root.left) dfs(root.left, depth);
+        if (root.right) dfs(root.right, depth);
+    }
+    dfs(root, 0);
+    return maxDepth;
+};
+</code></pre></div><h2 id="lcr-140-训练计划-ii"><a href="#lcr-140-训练计划-ii" class="header-anchor">#</a> LCR 140. 训练计划 II</h2> <p>给定一个头节点为 <code>head</code> 的链表用于记录一系列核心肌群训练项目编号，请查找并返回倒数第 <code>cnt</code> 个训练项目编号。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：head = [2,4,7,8], cnt = 1
+输出：8
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= head.length &lt;= 100</code></li> <li><code>0 &lt;= head[i] &lt;= 100</code></li> <li><code>1 &lt;= cnt &lt;= head.length</code></li></ul> <p>1.快慢指针</p> <p>只需遍历一次，快指针先走cnt步，然后和慢指针一起每次走一步，当快指针为空时，慢指针指向的就是所求，时间复杂度O(n)，空间复杂度O(1)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @param {number} cnt
+ * @return {ListNode}
+ */
+var trainingPlan = function (head, cnt) {
+    let fast = head;
+    let slow = head;
+    for (let i = 0; i &lt; cnt; i++) fast = fast.next;
+    while (fast) {
+        fast = fast.next;
+        slow = slow.next;
+    }
+    return slow;
+};
+</code></pre></div><h2 id="_62-不同路径"><a href="#_62-不同路径" class="header-anchor">#</a> 62.不同路径</h2> <p>一个机器人位于一个 <code>m x n</code> 网格的左上角 （起始点在下图中标记为 “Start” ）。</p> <p>机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角（在下图中标记为 “Finish” ）。</p> <p>问总共有多少条不同的路径？</p> <p><strong>示例 1：</strong></p> <p><img src="https://pic.leetcode.cn/1697422740-adxmsI-image.png" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：m = 3, n = 7
+输出：28
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：m = 3, n = 2
+输出：3
+解释：
+从左上角开始，总共有 3 条路径可以到达右下角。
+1. 向右 -&gt; 向下 -&gt; 向下
+2. 向下 -&gt; 向下 -&gt; 向右
+3. 向下 -&gt; 向右 -&gt; 向下
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：m = 7, n = 3
+输出：28
+</code></pre></div><p><strong>示例 4：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：m = 3, n = 3
+输出：6
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= m, n &lt;= 100</code></li> <li>题目数据保证答案小于等于 <code>2 * 10^9</code></li></ul> <p><strong>1.动态规划</strong></p> <p>维护一个m*n的二维数组dp，dp[i][j]代表到第i+1行，第j+1列一共有多少种路径，等于到其上方的路径与到其左方的路径之和，时间复杂度O(m*n)，空间复杂度O(m*n)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number} m
+ * @param {number} n
+ * @return {number}
+ */
+var uniquePaths = function (m, n) {
+    let dp = Array(m).fill().map(() =&gt; Array(n));
+    for (let i = 0; i &lt; m; i++) dp[i][0] = 1;
+    for (let i = 0; i &lt; n; i++) dp[0][i] = 1
+    for (let i = 1; i &lt; m; i++) {
+        for (let j = 1; j &lt; n; j++) {
+            dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+        }
+    }
+    return dp[m - 1][n - 1];
+};
+</code></pre></div><h2 id="_695-岛屿的最大面积"><a href="#_695-岛屿的最大面积" class="header-anchor">#</a> 695.岛屿的最大面积</h2> <p>给你一个大小为 <code>m x n</code> 的二进制矩阵 <code>grid</code> 。</p> <p><strong>岛屿</strong> 是由一些相邻的 <code>1</code> (代表土地) 构成的组合，这里的「相邻」要求两个 <code>1</code> 必须在 <strong>水平或者竖直的四个方向上</strong> 相邻。你可以假设 <code>grid</code> 的四个边缘都被 <code>0</code>（代表水）包围着。</p> <p>岛屿的面积是岛上值为 <code>1</code> 的单元格的数目。</p> <p>计算并返回 <code>grid</code> 中最大的岛屿面积。如果没有岛屿，则返回面积为 <code>0</code> 。</p> <p><strong>示例 1：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2021/05/01/maxarea1-grid.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]
+输出：6
+解释：答案不应该是 11 ，因为岛屿只能包含水平或垂直这四个方向上的 1 。
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：grid = [[0,0,0,0,0,0,0,0]]
+输出：0
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>m == grid.length</code></li> <li><code>n == grid[i].length</code></li> <li><code>1 &lt;= m, n &lt;= 50</code></li> <li><code>grid[i][j]</code> 为 <code>0</code> 或 <code>1</code></li></ul> <p><strong>1.深度优先遍历&amp;沉没法</strong></p> <p>在岛屿数量这题的基础上新增一个面积变量，每次沉没岛屿的时候+1即可，时间复杂度O(m*n)，空间复杂度O(m*n)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number[][]} grid
+ * @return {number}
+ */
+var maxAreaOfIsland = function (grid) {
+    let maxArea = 0;
+    let area = 0;
+    let dfs = (i, j) =&gt; {
+        if (
+            i &lt; 0 ||
+            i &gt;= grid.length ||
+            j &lt; 0 ||
+            j &gt;= grid[0].length ||
+            grid[i][j] === 0
+        )
+            return;
+        grid[i][j] = 0;
+        area++;
+        if (area &gt; maxArea) maxArea = area;
+        dfs(i - 1, j);
+        dfs(i + 1, j);
+        dfs(i, j - 1);
+        dfs(i, j + 1);
+    };
+
+    for (let i = 0; i &lt; grid.length; i++) {
+        for (let j = 0; j &lt; grid[0].length; j++) {
+            if (grid[i][j] === 1) {
+                dfs(i, j, 0);
+                area = 0;
+            }
+        }
+    }
+    return maxArea;
+};
+</code></pre></div><h2 id="lcr-126-斐波那契数"><a href="#lcr-126-斐波那契数" class="header-anchor">#</a> LCR 126. 斐波那契数</h2> <p><strong>斐波那契数</strong> （通常用 <code>F(n)</code> 表示）形成的序列称为 <strong>斐波那契数列</strong> 。该数列由 <strong>0</strong> 和 <strong>1</strong> 开始，后面的每一项数字都是前面两项数字的和。也就是：</p> <div class="language- extra-class"><pre class="language-text"><code>F(0) = 0，F(1) = 1
+F(n) = F(n - 1) + F(n - 2)，其中 n &gt; 1
+</code></pre></div><p>给定 <code>n</code> ，请计算 <code>F(n)</code> 。</p> <p>答案需要取模 1e9+7(1000000007) ，如计算初始结果为：1000000008，请返回 1。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：n = 2
+输出：1
+解释：F(2) = F(1) + F(0) = 1 + 0 = 1
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：n = 3
+输出：2
+解释：F(3) = F(2) + F(1) = 1 + 1 = 2
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：n = 4
+输出：3
+解释：F(4) = F(3) + F(2) = 2 + 1 = 3
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>0 &lt;= n &lt;= 100</code></li></ul> <p><strong>1.动态规划</strong></p> <p>此题取模是为了把数值控制在可控范围内，防止溢出，时间复杂度O(n)，空间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number} n
+ * @return {number}
+ */
+var fib = function (n) {
+    if (n === 0) return 0;
+    if (n === 1) return 1;
+    let dp = [0, 1];
+    for (let i = 2; i &lt;= n; i++) {
+        dp[i] = (dp[i - 1] + dp[i - 2]) % 1000000007;
+    }
+    return dp[dp.length - 1];
+};
+</code></pre></div><h2 id="_42-接雨水"><a href="#_42-接雨水" class="header-anchor">#</a> 42.接雨水</h2> <p>给定 <code>n</code> 个非负整数表示每个宽度为 <code>1</code> 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。</p> <p><strong>示例 1：</strong></p> <p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/10/22/rainwatertrap.png" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：height = [0,1,0,2,1,0,1,3,2,1,2,1]
+输出：6
+解释：上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水（蓝色部分表示雨水）。 
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：height = [4,2,0,3,2,5]
+输出：9
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>n == height.length</code></li> <li><code>1 &lt;= n &lt;= 2 * 10^4</code></li> <li><code>0 &lt;= height[i] &lt;= 10^5</code></li></ul> <p><strong>1.前后缀分解</strong></p> <p>维护一个前缀最大值数组，代表第i个位置之前最大的高度是多少，也就是左侧最大高度，再维护一个后缀最大值数组，代表第i个位置之后最大的高度是多少，也就是右侧最大高度，这两个高度的最小值就代表所能容纳的最大雨水量，减去第i个位置本身的高度，就是第i个位置实际所能容纳的雨水量，将所有位置累加就是答案，时间复杂度O(n)，空间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number[]} height
+ * @return {number}
+ */
+var trap = function (height) {
+    let area = 0;
+    let leftMax = Array(height.length).fill(0);
+    let rightMax = Array(height.length).fill(0);
+    leftMax[0] = height[0];
+    rightMax[height.length - 1] = height[height.length - 1];
+    for (let i = 1; i &lt; height.length; i++) {
+        leftMax[i] = Math.max(leftMax[i - 1], height[i]);
+    }
+    for (let i = height.length - 2; i &gt;= 0; i--) {
+        rightMax[i] = Math.max(rightMax[i + 1], height[i]);
+    }
+    for (let i = 0; i &lt; height.length; i++) {
+        area += Math.min(leftMax[i], rightMax[i]) - height[i];
+    }
+    return area;
+};
+</code></pre></div><p><strong>2.相向双指针法</strong></p> <p>思路其实和第一种方法类似，但是这里不需要用数组存储前后缀最大值，因为比如当前缀最大值小于后缀最大值时，所能存储的最大容量就是前缀最大值减去当前的高度了，注意while循环内不需要判断left===right的情况，因为这种情况下两者重合面积为0，而最后一块需要计算的面积在此之前已经计算过了，时间复杂度O(n)，空间复杂度O(1)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number[]} height
+ * @return {number}
+ */
+var trap = function (height) {
+    let area = 0;
+    let left = 0;
+    let right = height.length - 1;
+    let leftMax = 0;
+    let rightMax = 0;
+    while (left &lt; right) {
+        leftMax = Math.max(leftMax, height[left]);
+        rightMax = Math.max(rightMax, height[right]);
+        if (leftMax &lt; rightMax) {
+            area += leftMax - height[left];
+            left++;
+        } else {
+            area += rightMax - height[right];
+            right--;
+        }
+    }
+    return area;
+};
+</code></pre></div><h2 id="_56-合并区间"><a href="#_56-合并区间" class="header-anchor">#</a> 56.合并区间</h2> <p>以数组 <code>intervals</code> 表示若干个区间的集合，其中单个区间为 <code>intervals[i] = [starti, endi]</code> 。请你合并所有重叠的区间，并返回 <em>一个不重叠的区间数组，该数组需恰好覆盖输入中的所有区间</em> 。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：intervals = [[1,3],[2,6],[8,10],[15,18]]
+输出：[[1,6],[8,10],[15,18]]
+解释：区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6].
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：intervals = [[1,4],[4,5]]
+输出：[[1,5]]
+解释：区间 [1,4] 和 [4,5] 可被视为重叠区间。
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= intervals.length &lt;= 10^4</code></li> <li><code>intervals[i].length == 2</code></li> <li><code>0 &lt;= starti &lt;= endi &lt;= 10^4</code></li></ul> <p><strong>1.排序法</strong></p> <p>先排序后比较大小，注意前一元素与后一元素的首元素和尾元素比较时要分情况，若大于其尾元素则前一元素不需要改变，时间复杂度O(nlogn)，空间复杂度O(1)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number[][]} intervals
+ * @return {number[][]}
+ */
+var merge = function (intervals) {
+    intervals.sort((a, b) =&gt; {
+        return a[0] - b[0];
+    });
+    for (let i = 0; i &lt; intervals.length - 1; i++) {
+        if (intervals[i][1] &gt;= intervals[i + 1][0]) {
+            if (intervals[i][1] &lt; intervals[i + 1][1])
+                intervals[i][1] = intervals[i + 1][1];
+            intervals.splice(i + 1, 1);
+            i--;
+        }
+    }
+    return intervals;
+};
+</code></pre></div><h2 id="_236-二叉树的最近公共祖先"><a href="#_236-二叉树的最近公共祖先" class="header-anchor">#</a> 236.二叉树的最近公共祖先</h2> <p>给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。</p> <p><a href="https://baike.baidu.com/item/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/8918834?fr=aladdin" target="_blank" rel="noopener noreferrer">百度百科<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>中最近公共祖先的定义为：“对于有根树 T 的两个节点 p、q，最近公共祖先表示为一个节点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（<strong>一个节点也可以是它自己的祖先</strong>）。”</p> <p><strong>示例 1：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2018/12/14/binarytree.png" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+输出：3
+解释：节点 5 和节点 1 的最近公共祖先是节点 3 。
+</code></pre></div><p><strong>示例 2：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2018/12/14/binarytree.png" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
+输出：5
+解释：节点 5 和节点 4 的最近公共祖先是节点 5 。因为根据定义最近公共祖先节点可以为节点本身。
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [1,2], p = 1, q = 2
+输出：1
+</code></pre></div><p><strong>提示：</strong></p> <ul><li>树中节点数目在范围 <code>[2, 105]</code> 内。</li> <li><code>-109 &lt;= Node.val &lt;= 109</code></li> <li>所有 <code>Node.val</code> <code>互不相同</code> 。</li> <li><code>p != q</code></li> <li><code>p</code> 和 <code>q</code> 均存在于给定的二叉树中。</li></ul> <p><strong>1.后序遍历法</strong></p> <p>通过后序遍历，若存在p或q则不断向上返回左右孩子，时间复杂度O(n)，空间复杂度O(h)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @param {TreeNode} p
+ * @param {TreeNode} q
+ * @return {TreeNode}
+ */
+var lowestCommonAncestor = function (root, p, q) {
+    let traversal = (root, p, q) =&gt; {
+        if (root === null) return root;
+        if (root === p || root === q) return root;
+        let left = traversal(root.left, p, q);
+        let right = traversal(root.right, p, q);
+        if (left !== null &amp;&amp; right !== null) return root;
+        if (left === null &amp;&amp; right !== null) return right;
+        else if (left !== null &amp;&amp; right === null) return left;
+        else return null;
+    }
+    return traversal(root, p, q);
+};
+</code></pre></div><h2 id="_103-二叉树的锯齿形层序遍历"><a href="#_103-二叉树的锯齿形层序遍历" class="header-anchor">#</a> 103.二叉树的锯齿形层序遍历</h2> <p>给你二叉树的根节点 <code>root</code> ，返回其节点值的 <strong>锯齿形层序遍历</strong> 。（即先从左往右，再从右往左进行下一层遍历，以此类推，层与层之间交替进行）。</p> <p><strong>示例 1：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2021/02/19/tree1.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [3,9,20,null,null,15,7]
+输出：[[3],[20,9],[15,7]]
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [1]
+输出：[[1]]
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = []
+输出：[]
+</code></pre></div><p><strong>提示：</strong></p> <ul><li>树中节点数目在范围 <code>[0, 2000]</code> 内</li> <li><code>-100 &lt;= Node.val &lt;= 100</code></li></ul> <p><strong>1.层序遍历</strong></p> <p>层序遍历每偶数层翻转subRes数组即可，时间复杂度O(n^2)，空间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[][]}
+ */
+var zigzagLevelOrder = function (root) {
+    if (!root) return [];
+    let result = [];
+    let queue = [root];
+    let k = 0;
+    while(queue.length) {
+        let length = queue.length;
+        let subRes = [];
+        k++;
+        while(length--) {
+            let cur = queue.shift();
+            subRes.push(cur.val);
+            if(cur.left) queue.push(cur.left);
+            if(cur.right) queue.push(cur.right);
+        }
+        if(k % 2 === 0) subRes.reverse();
+        result.push(subRes);
+    }
+    return result;
+};
+</code></pre></div><h2 id="_2-两数相加"><a href="#_2-两数相加" class="header-anchor">#</a> 2.两数相加</h2> <p>给你两个 <strong>非空</strong> 的链表，表示两个非负的整数。它们每位数字都是按照 <strong>逆序</strong> 的方式存储的，并且每个节点只能存储 <strong>一位</strong> 数字。</p> <p>请你将两个数相加，并以相同形式返回一个表示和的链表。</p> <p>你可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p> <p><strong>示例 1：</strong></p> <p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2021/01/02/addtwonumber1.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：l1 = [2,4,3], l2 = [5,6,4]
+输出：[7,0,8]
+解释：342 + 465 = 807.
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：l1 = [0], l2 = [0]
+输出：[0]
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
+输出：[8,9,9,9,0,0,0,1]
+</code></pre></div><p><strong>提示：</strong></p> <ul><li>每个链表中的节点数在范围 <code>[1, 100]</code> 内</li> <li><code>0 &lt;= Node.val &lt;= 9</code></li> <li>题目数据保证列表表示的数字不含前导零</li></ul> <p><strong>1.按位求和法</strong></p> <p>利用数字按位求和的方法，直接遍历按位求和即可，注意求和过程要考虑进位，时间复杂度O(Max(m,n))，空间复杂度O(Max(m,n))：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} l1
+ * @param {ListNode} l2
+ * @return {ListNode}
+ */
+var addTwoNumbers = function (l1, l2) {
+    let head = new ListNode(0, null);
+    let cur = head;
+    let carry = 0;
+    while (l1 &amp;&amp; l2) {
+        let sum = l1.val + l2.val + carry;
+        carry = 0;
+        if (sum &gt;= 10) {
+            sum -= 10;
+            carry = 1;
+        }
+        cur.next = new ListNode(sum, null);
+        cur = cur.next;
+        l1 = l1.next;
+        l2 = l2.next;
+    }
+    while (l1) {
+        sum = l1.val + carry;
+        carry = 0;
+        if (sum &gt;= 10) {
+            sum -= 10;
+            carry = 1;
+        }
+        cur.next = new ListNode(sum, null);
+        cur = cur.next;
+        l1 = l1.next;
+    }
+    while (l2) {
+        sum = l2.val + carry;
+        carry = 0;
+        if (sum &gt;= 10) {
+            sum -= 10;
+            carry = 1;
+        }
+        cur.next = new ListNode(sum, null);
+        cur = cur.next;
+        l2 = l2.next;
+    }
+    if (!l1 &amp;&amp; !l2 &amp;&amp; carry)
+        cur.next = new ListNode(carry, null);
+    return head.next;
+};
+</code></pre></div><h2 id="_1556-千位分隔数"><a href="#_1556-千位分隔数" class="header-anchor">#</a> 1556.千位分隔数</h2> <p>给你一个整数 <code>n</code>，请你每隔三位添加点（即 &quot;.&quot; 符号）作为千位分隔符，并将结果以字符串格式返回。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：n = 987
+输出：&quot;987&quot;
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：n = 1234
+输出：&quot;1.234&quot;
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：n = 123456789
+输出：&quot;123.456.789&quot;
+</code></pre></div><p><strong>示例 4：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：n = 0
+输出：&quot;0&quot;
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>0 &lt;= n &lt; 2^31</code></li></ul> <p><strong>1.toLocaleString</strong></p> <p>时间复杂度O(1)，空间复杂度O(1)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number} n
+ * @return {string}
+ */
+var thousandSeparator = function (n) {
+    return n.toLocaleString().replace(/,/g, &quot;.&quot;);
+};
+</code></pre></div><p><strong>2.splice+join</strong></p> <p>时间复杂度O(n)，空间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number} n
+ * @return {string}
+ */
+var thousandSeparator = function (n) {
+    let str = n.toString().split(&quot;&quot;);
+    for (let i = str.length - 3; i &gt; 0; i = i - 3) {
+        str.splice(i, 0, &quot;.&quot;);
+    }
+    return str.join('');
+};
+</code></pre></div><h2 id="_209-长度最小的子数组"><a href="#_209-长度最小的子数组" class="header-anchor">#</a> 209.长度最小的子数组</h2> <p>给定一个含有 <code>n</code> 个正整数的数组和一个正整数 <code>target</code> <strong>。</strong></p> <p>找出该数组中满足其总和大于等于 <code>target</code> 的长度最小的 <strong>子数组</strong> <code>[numsl, numsl+1, ..., numsr-1, numsr]</code> ，并返回其长度**。**如果不存在符合条件的子数组，返回 <code>0</code> 。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：target = 7, nums = [2,3,1,2,4,3]
+输出：2
+解释：子数组 [4,3] 是该条件下的长度最小的子数组。
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：target = 4, nums = [1,4,4]
+输出：1
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：target = 11, nums = [1,1,1,1,1,1,1,1]
+输出：0
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= target &lt;= 109</code></li> <li><code>1 &lt;= nums.length &lt;= 105</code></li> <li><code>1 &lt;= nums[i] &lt;= 104</code></li></ul> <p><strong>进阶：</strong></p> <ul><li>如果你已经实现 <code>O(n)</code> 时间复杂度的解法, 请尝试设计一个 <code>O(n log(n))</code> 时间复杂度的解法。</li></ul> <p><strong>1.滑动窗口解法（双指针）</strong></p> <p>做法与无重复字符的最长子串类似，先找到大于等于target的子数组，然后右指针不动，移动左指针去寻找更短的子数组，若没有找到，再移动右指针，寻找更多可能，时间复杂度O(n)，空间复杂度O(1)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number} target
+ * @param {number[]} nums
+ * @return {number}
+ */
+var minSubArrayLen = function (target, nums) {
+    let left = 0;
+    let right = 0;
+    let sum = 0;
+    let minLength = nums.length + 1;
+    while (right !== nums.length) {
+        sum += nums[right];
+        while (sum &gt;= target) {
+            right - left + 1 &lt; minLength ? minLength = right - left + 1 : minLength;
+            sum -= nums[left];
+            left++;
+        }
+        right++;
+    }
+    return minLength === nums.length + 1 ? 0 : minLength;
+};
+</code></pre></div><h2 id="_283-移动零"><a href="#_283-移动零" class="header-anchor">#</a> 283.移动零</h2> <p>给定一个数组 <code>nums</code>，编写一个函数将所有 <code>0</code> 移动到数组的末尾，同时保持非零元素的相对顺序。</p> <p><strong>请注意</strong> ，必须在不复制数组的情况下原地对数组进行操作。</p> <p><strong>示例 1:</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入: nums = [0,1,0,3,12]
+输出: [1,3,12,0,0]
+</code></pre></div><p><strong>示例 2:</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入: nums = [0]
+输出: [0]
+</code></pre></div><p><strong>提示</strong>:</p> <ul><li><code>1 &lt;= nums.length &lt;= 10^4</code></li> <li><code>-2^31 &lt;= nums[i] &lt;= 2^31 - 1</code></li></ul> <p>**进阶：**你能尽量减少完成的操作次数吗？</p> <p><strong>1.双指针法</strong></p> <p>一个指针去按序遍历数组的每一个数，当访问到非零数时，替换掉另一个指针所对应的数，最后把剩余的位置全部补零即可，此题的关键思路是把非零的数移动到数组前面，然后后面全部补零，而不是先找到零再与后面的数进行交换，时间复杂度O(n)，空间复杂度O(1)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var moveZeroes = function (nums) {
+    let point = 0;
+    for (let i = 0; i &lt; nums.length; i++) {
+        if (nums[i] !== 0) {
+            nums[point] = nums[i];
+            point++;
+        }
+    }
+    for (let i = point; i &lt; nums.length; i++) {
+        nums[i] = 0;
+    }
+    return nums;
+};
+</code></pre></div><h2 id="_226-翻转二叉树"><a href="#_226-翻转二叉树" class="header-anchor">#</a> 226.翻转二叉树</h2> <p>给你一棵二叉树的根节点 <code>root</code> ，翻转这棵二叉树，并返回其根节点。</p> <p><strong>示例 1：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2021/03/14/invert1-tree.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [4,2,7,1,3,6,9]
+输出：[4,7,2,9,6,3,1]
+</code></pre></div><p><strong>示例 2：</strong></p> <p><img src="https://assets.leetcode.com/uploads/2021/03/14/invert2-tree.jpg" alt="img"></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = [2,1,3]
+输出：[2,3,1]
+</code></pre></div><p><strong>示例 3：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：root = []
+输出：[]
+</code></pre></div><p><strong>提示：</strong></p> <ul><li>树中节点数目范围在 <code>[0, 100]</code> 内</li> <li><code>-100 &lt;= Node.val &lt;= 100</code></li></ul> <p><strong>1.递归</strong></p> <p>前序后序都行，中序不行（如果是中序，两次都要invertTree(root.left);不然右侧子树在交换后不会被操作到），时间复杂度O(n)，空间复杂度O(h)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ */
+var invertTree = function (root) {
+    if (!root) return root;
+    let temp = root.left;
+    root.left = root.right;
+    root.right = temp;
+    invertTree(root.left);
+    invertTree(root.right);
+    return root;
+};
+</code></pre></div><p><strong>2.层序遍历</strong></p> <p>每遍历到一个节点直接交换其左右子树即可，时间复杂度O(n)，空间复杂度O(n)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {TreeNode}
+ */
+var invertTree = function (root) {
+    if (!root) return root;
+    let queue = [root];
+    while (queue.length) {
+        let length = queue.length;
+        for (let i = 0; i &lt; length; i++) {
+            let cur = queue.shift();
+            let temp = cur.left;
+            cur.left = cur.right;
+            cur.right = temp;
+            if (cur.left) queue.push(cur.left);
+            if (cur.right) queue.push(cur.right);
+        }
+    }
+    return root;
+};
+</code></pre></div><h2 id="_14-最长公共前缀"><a href="#_14-最长公共前缀" class="header-anchor">#</a> 14.最长公共前缀</h2> <p>编写一个函数来查找字符串数组中的最长公共前缀。</p> <p>如果不存在公共前缀，返回空字符串 <code>&quot;&quot;</code>。</p> <p><strong>示例 1：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：strs = [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]
+输出：&quot;fl&quot;
+</code></pre></div><p><strong>示例 2：</strong></p> <div class="language- extra-class"><pre class="language-text"><code>输入：strs = [&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]
+输出：&quot;&quot;
+解释：输入不存在公共前缀。
+</code></pre></div><p><strong>提示：</strong></p> <ul><li><code>1 &lt;= strs.length &lt;= 200</code></li> <li><code>0 &lt;= strs[i].length &lt;= 200</code></li> <li><code>strs[i]</code> 如果非空，则仅由小写英文字母组成</li></ul> <p><strong>1.纵向比较法</strong></p> <p>最长公共前缀的长度肯定不会超过数组第一个元素的长度，因此比较的位数最多就是数组第一个元素的长度，每次比较都跳着去比，只比较数组每个元素当前这个位置和第一个元素这个位置是否一致，只有全部一致才会进入下一次比较，若不一致，则说明最长公共前缀就是当前位置往前一位，时间复杂度O(m*n)，空间复杂度O(1)：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+ * @param {string[]} strs
+ * @return {string}
+ */
+var longestCommonPrefix = function (strs) {
+    let public = strs[0];
+    for (let i = 0; i &lt; public.length; i++) {
+        for (let j = 1; j &lt; strs.length; j++) {
+            if (strs[j][i] !== public[i])
+                return public.slice(0, i);
+        }
+    }
+    return strs[0];
+};
+</code></pre></div></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间: </span> <span class="time">2025/3/9 20:17:28</span></div></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-7c337468 data-v-757b4ec5><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_3-无重复字符的最长子串" class="sidebar-link reco-side-_3-无重复字符的最长子串" data-v-7c337468>3.无重复字符的最长子串</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_88-合并两个有序数组" class="sidebar-link reco-side-_88-合并两个有序数组" data-v-7c337468>88.合并两个有序数组</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_165-比较版本号" class="sidebar-link reco-side-_165-比较版本号" data-v-7c337468>165.比较版本号</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_1-两数之和" class="sidebar-link reco-side-_1-两数之和" data-v-7c337468>1.两数之和</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_415-字符串相加" class="sidebar-link reco-side-_415-字符串相加" data-v-7c337468>415.字符串相加</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_20-有效的括号" class="sidebar-link reco-side-_20-有效的括号" data-v-7c337468>20.有效的括号</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_46-全排列" class="sidebar-link reco-side-_46-全排列" data-v-7c337468>46.全排列</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_206-反转链表" class="sidebar-link reco-side-_206-反转链表" data-v-7c337468>206.反转链表</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_53-最大子数组和" class="sidebar-link reco-side-_53-最大子数组和" data-v-7c337468>53.最大子数组和</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_102-二叉树的层序遍历" class="sidebar-link reco-side-_102-二叉树的层序遍历" data-v-7c337468>102.二叉树的层序遍历</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_121-买卖股票的最佳时机" class="sidebar-link reco-side-_121-买卖股票的最佳时机" data-v-7c337468>121.买卖股票的最佳时机</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_15-三数之和" class="sidebar-link reco-side-_15-三数之和" data-v-7c337468>15.三数之和</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_112-路径总和" class="sidebar-link reco-side-_112-路径总和" data-v-7c337468>112.路径总和</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_141-环形链表" class="sidebar-link reco-side-_141-环形链表" data-v-7c337468>141.环形链表</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_70-爬楼梯" class="sidebar-link reco-side-_70-爬楼梯" data-v-7c337468>70.爬楼梯</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_215-数组中的第k个最大元素" class="sidebar-link reco-side-_215-数组中的第k个最大元素" data-v-7c337468>215.数组中的第K个最大元素</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_5-最长回文子串" class="sidebar-link reco-side-_5-最长回文子串" data-v-7c337468>5.最长回文子串</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_146-lru缓存" class="sidebar-link reco-side-_146-lru缓存" data-v-7c337468>146.LRU缓存</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_21-合并两个有序链表" class="sidebar-link reco-side-_21-合并两个有序链表" data-v-7c337468>21.合并两个有序链表</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_912-排序数组-手撕快速排序" class="sidebar-link reco-side-_912-排序数组-手撕快速排序" data-v-7c337468>912.排序数组（手撕快速排序）</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_54-螺旋矩阵" class="sidebar-link reco-side-_54-螺旋矩阵" data-v-7c337468>54.螺旋矩阵</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_200-岛屿数量" class="sidebar-link reco-side-_200-岛屿数量" data-v-7c337468>200.岛屿数量</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_129-求根节点到叶节点数字之和" class="sidebar-link reco-side-_129-求根节点到叶节点数字之和" data-v-7c337468>129.求根节点到叶节点数字之和</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_704-二分查找" class="sidebar-link reco-side-_704-二分查找" data-v-7c337468>704.二分查找</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_300-最长递增子序列" class="sidebar-link reco-side-_300-最长递增子序列" data-v-7c337468>300.最长递增子序列</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_322-零钱兑换" class="sidebar-link reco-side-_322-零钱兑换" data-v-7c337468>322.零钱兑换</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_93-复原ip地址" class="sidebar-link reco-side-_93-复原ip地址" data-v-7c337468>93.复原IP地址</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_22-括号生成" class="sidebar-link reco-side-_22-括号生成" data-v-7c337468>22.括号生成</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_94-二叉树的中序遍历" class="sidebar-link reco-side-_94-二叉树的中序遍历" data-v-7c337468>94.二叉树的中序遍历</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_104-二叉树的最大深度" class="sidebar-link reco-side-_104-二叉树的最大深度" data-v-7c337468>104.二叉树的最大深度</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#lcr-140-训练计划-ii" class="sidebar-link reco-side-lcr-140-训练计划-ii" data-v-7c337468>LCR 140. 训练计划 II</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_62-不同路径" class="sidebar-link reco-side-_62-不同路径" data-v-7c337468>62.不同路径</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_695-岛屿的最大面积" class="sidebar-link reco-side-_695-岛屿的最大面积" data-v-7c337468>695.岛屿的最大面积</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#lcr-126-斐波那契数" class="sidebar-link reco-side-lcr-126-斐波那契数" data-v-7c337468>LCR 126. 斐波那契数</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_42-接雨水" class="sidebar-link reco-side-_42-接雨水" data-v-7c337468>42.接雨水</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_56-合并区间" class="sidebar-link reco-side-_56-合并区间" data-v-7c337468>56.合并区间</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_236-二叉树的最近公共祖先" class="sidebar-link reco-side-_236-二叉树的最近公共祖先" data-v-7c337468>236.二叉树的最近公共祖先</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_103-二叉树的锯齿形层序遍历" class="sidebar-link reco-side-_103-二叉树的锯齿形层序遍历" data-v-7c337468>103.二叉树的锯齿形层序遍历</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_2-两数相加" class="sidebar-link reco-side-_2-两数相加" data-v-7c337468>2.两数相加</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_1556-千位分隔数" class="sidebar-link reco-side-_1556-千位分隔数" data-v-7c337468>1556.千位分隔数</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_209-长度最小的子数组" class="sidebar-link reco-side-_209-长度最小的子数组" data-v-7c337468>209.长度最小的子数组</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_283-移动零" class="sidebar-link reco-side-_283-移动零" data-v-7c337468>283.移动零</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_226-翻转二叉树" class="sidebar-link reco-side-_226-翻转二叉树" data-v-7c337468>226.翻转二叉树</a></li><li class="level-2" data-v-7c337468><a href="/blog/articles/algorithm/%E5%89%8D%E7%AB%AF%E7%AE%97%E6%B3%95%E9%A2%98.html#_14-最长公共前缀" class="sidebar-link reco-side-_14-最长公共前缀" data-v-7c337468>14.最长公共前缀</a></li></ul></div></div></div><div class="global-ui"><div id="goTop" class="hide-cat" data-v-f6babb38></div><!----><div></div><canvas id="vuepress-canvas-cursor"></canvas><div class="kanbanniang" data-v-0c89d2e6><div class="banniang-container" style="display:;" data-v-0c89d2e6><div class="messageBox" style="left:68px;bottom:315px;display:none;" data-v-0c89d2e6>
+      我是Stephen Martin欢迎你的关注 
+    </div> <div class="operation" style="left:90px;bottom:165px;display:;" data-v-0c89d2e6><i class="kbnfont kbn-ban-home ban-home" data-v-0c89d2e6></i> <i class="kbnfont kbn-ban-message message" data-v-0c89d2e6></i> <i class="kbnfont kbn-ban-close close" data-v-0c89d2e6></i> <a target="_blank" href="https://vuepress-theme-reco.recoluan.com/views/plugins/kanbanniang.html" data-v-0c89d2e6><i class="kbnfont kbn-ban-info info" data-v-0c89d2e6></i></a> <i class="kbnfont kbn-ban-theme skin" style="display:;" data-v-0c89d2e6></i></div> <canvas id="banniang" width="150" height="220" class="live2d" style="left:90px;bottom:105px;opacity:0.9;" data-v-0c89d2e6></canvas></div> <div class="showBanNiang" style="display:none;" data-v-0c89d2e6>
+    看板娘
+  </div></div><div class="reco-bgm-panel" data-v-4396cf49><audio id="bgm" src="/assets/music/Canon.mp3" data-v-4396cf49></audio> <div class="reco-float-box" style="bottom:200px;z-index:999999;display:none;" data-v-4396cf49 data-v-9f726a78 data-v-4396cf49><img src="/assets/musicCover/Canon.jpg" data-v-4396cf49></div> <div class="reco-bgm-box" style="left:10px;bottom:10px;z-index:999999;" data-v-4396cf49 data-v-9f726a78 data-v-4396cf49><div class="reco-bgm-cover" style="background-image:url(/assets/musicCover/Canon.jpg);" data-v-4396cf49><div class="mini-operation" style="display:none;" data-v-4396cf49><i class="reco-bgm reco-bgm-pause" style="display:none;" data-v-4396cf49></i> <i class="reco-bgm reco-bgm-play" style="display:none;" data-v-4396cf49></i></div> <div class="falut-message" style="display:none;" data-v-4396cf49>
+          播放失败
+        </div></div> <div class="reco-bgm-info" data-v-4396cf49 data-v-9f726a78 data-v-4396cf49><div class="info-box" data-v-4396cf49><i class="reco-bgm reco-bgm-music music" data-v-4396cf49></i>卡农</div> <div class="info-box" data-v-4396cf49><i class="reco-bgm reco-bgm-artist" data-v-4396cf49></i>dylanf</div> <div class="reco-bgm-progress" data-v-4396cf49><div class="progress-bar" data-v-4396cf49><div class="bar" data-v-4396cf49></div></div></div> <div class="reco-bgm-operation" data-v-4396cf49><i class="reco-bgm reco-bgm-last last" data-v-4396cf49></i> <i class="reco-bgm reco-bgm-pause pause" style="display:none;" data-v-4396cf49></i> <i class="reco-bgm reco-bgm-play play" data-v-4396cf49></i> <i class="reco-bgm reco-bgm-next next" data-v-4396cf49></i> <i class="reco-bgm reco-bgm-volume1 volume" data-v-4396cf49></i> <i class="reco-bgm reco-bgm-mute mute" style="display:none;" data-v-4396cf49></i> <div class="volume-bar" data-v-4396cf49><div class="bar" data-v-4396cf49></div></div></div></div> <div class="reco-bgm-left-box" data-v-4396cf49 data-v-9f726a78 data-v-4396cf49><i class="reco-bgm reco-bgm-left" data-v-4396cf49></i></div></div></div><!----></div></div>
+    <script src="/blog/assets/js/app.9ee8e2bd.js" defer></script><script src="/blog/assets/js/7.7d4e0756.js" defer></script><script src="/blog/assets/js/2.b149c125.js" defer></script><script src="/blog/assets/js/1.57923c2c.js" defer></script><script src="/blog/assets/js/45.9db3007f.js" defer></script><script src="/blog/assets/js/38.1cd48603.js" defer></script>
+  </body>
+</html>
